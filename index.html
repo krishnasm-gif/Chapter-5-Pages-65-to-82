@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 8 Physics Ch-5: SOUND (ధ్వని) | Jacob Gapp School, Paladugu</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & Noto Sans Telugu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Telugu', 'sans-serif'],
+            telugu: ['Noto Sans Telugu', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; font-size: 17px; }
+    body { font-family: 'Inter', 'Noto Sans Telugu', sans-serif; line-height: 1.8; overflow-x: hidden; overflow-y: auto !important; }
+    .telugu-font { font-family: 'Noto Sans Telugu', sans-serif; line-height: 1.85; }
+
+    /* Non-blocking Elegant Background Watermark */
+    .watermark-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none !important;
+      z-index: 1;
+      opacity: 0.04;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(67, 56, 202, 0.45) 0px,
+        rgba(67, 56, 202, 0.45) 1.5px,
+        transparent 1.5px,
+        transparent 280px
+      );
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+      justify-content: space-around;
+      overflow: hidden;
+      user-select: none;
+    }
+    .watermark-text {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #1e1b4b;
+      transform: rotate(-30deg);
+      white-space: nowrap;
+      margin: 40px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      pointer-events: none !important;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #a5b4fc;
+      border-radius: 9999px;
+    }
+    /* Font sizing */
+    body.font-sm { font-size: 15px; }
+    body.font-md { font-size: 17px; }
+    body.font-lg { font-size: 19px; }
+    body.font-xl { font-size: 21px; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col font-md selection:bg-indigo-100 selection:text-indigo-900">
+
+  <!-- ==================== BACKGROUND WATERMARK ==================== -->
+  <div class="watermark-overlay" aria-hidden="true">
+    <div class="watermark-text">Bro. Balaswamy • JACOB GAPP SCHOOL, PALADUGU, TELANGANA</div>
+    <div class="watermark-text">Bro. Balaswamy • JACOB GAPP SCHOOL, PALADUGU, TELANGANA</div>
+    <div class="watermark-text">Bro. Balaswamy • JACOB GAPP SCHOOL, PALADUGU, TELANGANA</div>
+    <div class="watermark-text">Bro. Balaswamy • JACOB GAPP SCHOOL, PALADUGU, TELANGANA</div>
+    <div class="watermark-text">Bro. Balaswamy • JACOB GAPP SCHOOL, PALADUGU, TELANGANA</div>
+    <div class="watermark-text">Bro. Balaswamy • JACOB GAPP SCHOOL, PALADUGU, TELANGANA</div>
+    <div class="watermark-text">Bro. Balaswamy • JACOB GAPP SCHOOL, PALADUGU, TELANGANA</div>
+    <div class="watermark-text">Bro. Balaswamy • JACOB GAPP SCHOOL, PALADUGU, TELANGANA</div>
+  </div>
+
+  <!-- ==================== TOP INSTITUTIONAL RIBBON ==================== -->
+  <div class="relative z-20 bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white text-xs sm:text-sm py-2 px-4 font-bold border-b border-indigo-800 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-school text-amber-400"></i>
+        <span class="tracking-wide uppercase font-black text-amber-300">JACOB GAPP SCHOOL, PALADUGU, TELANGANA</span>
+      </div>
+      <div class="flex items-center gap-3 text-indigo-200 text-xs font-semibold">
+        <span><i class="fa-solid fa-user-tie text-amber-400 mr-1"></i>Mentor: <strong class="text-white">Bro. Balaswamy</strong></span>
+        <span>•</span>
+        <span><i class="fa-solid fa-envelope text-amber-400 mr-1"></i>balaswamysm@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== STUDENT ATTENDANCE & LIVE SESSION TOOLBAR (NON-BLOCKING) ==================== -->
+  <section class="relative z-20 bg-amber-50 border-b-2 border-amber-300 py-3 px-4 shadow-xs">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-3 w-full lg:w-auto">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-sm shrink-0">
+          <i class="fa-solid fa-stopwatch"></i>
+        </div>
+        <div>
+          <span class="text-xs font-black uppercase text-indigo-900 block tracking-wider">
+            Active Study Session Tracker (సక్రియ విద్యార్థి సమయ నమోదు)
+          </span>
+          <div class="text-xs text-slate-600 flex items-center gap-2">
+            <span>Reading Time: <strong id="liveSessionTimer" class="font-mono text-emerald-700 font-black text-sm">00:00</strong></span>
+            <span>•</span>
+            <span class="text-indigo-800 font-bold">Portal Unlocked &amp; Open to All</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Name & Roll Number Input with One-Click Report Submission -->
+      <div class="flex flex-wrap items-center gap-2 w-full lg:w-auto justify-end">
+        <input type="text" id="headerStudentName" placeholder="Student Name..." value="Bro. Balaswamy"
+          class="px-3 py-1.5 rounded-lg border-2 border-slate-300 text-xs font-bold text-slate-800 focus:outline-none focus:border-indigo-600 w-36 sm:w-44">
+        <input type="text" id="headerStudentRoll" placeholder="Roll No..." value="JGS-001"
+          class="px-3 py-1.5 rounded-lg border-2 border-slate-300 text-xs font-bold text-slate-800 focus:outline-none focus:border-indigo-600 w-24 sm:w-28">
+        <button onclick="saveStudentInfo()" title="Save info to session"
+          class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-xs shadow-xs transition flex items-center gap-1">
+          <i class="fa-solid fa-floppy-disk"></i>
+          <span>Save</span>
+        </button>
+        <button onclick="sendReportDirect()" title="Send session details to balaswamysm@gmail.com"
+          class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs shadow-xs transition flex items-center gap-1.5">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Email Report to balaswamysm@gmail.com</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HEADER & TOP INDEX NAVIGATION ==================== -->
+  <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b-2 border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand & Title -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-600 to-indigo-800 flex items-center justify-center text-white shadow-md">
+            <i class="fa-solid fa-volume-high text-2xl"></i>
+          </div>
+          <div>
+            <h1 class="font-black text-lg sm:text-2xl text-slate-900 leading-tight">Class 8: SOUND (ధ్వని)</h1>
+            <p class="text-xs sm:text-sm text-indigo-700 font-extrabold">SCERT Telangana Chapter 5 (Pages 65–82) • Bro. Balaswamy Portal</p>
+          </div>
+        </div>
+
+        <!-- Text Resizer Controls -->
+        <div class="flex items-center gap-2 sm:gap-4">
+          <div class="flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200 text-xs font-black">
+            <button onclick="changeFontSize('sm')" title="Small Text" class="px-2.5 py-1 rounded hover:bg-white text-slate-700">A-</button>
+            <button onclick="changeFontSize('md')" title="Normal Text" class="px-2.5 py-1 rounded bg-white shadow-xs text-indigo-700">A</button>
+            <button onclick="changeFontSize('lg')" title="Large Text" class="px-2.5 py-1 rounded hover:bg-white text-slate-700">A+</button>
+            <button onclick="changeFontSize('xl')" title="Extra Large Text" class="px-2.5 py-1 rounded hover:bg-white text-slate-700">A++</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Anchor Navigation Bar -->
+      <nav class="flex items-center gap-2 py-2.5 overflow-x-auto custom-scrollbar text-xs sm:text-sm font-extrabold whitespace-nowrap border-t border-slate-200">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-indigo-100 text-slate-800 hover:text-indigo-800 transition">
+          <i class="fa-solid fa-compass mr-1.5 text-indigo-600"></i>Overview
+        </a>
+        <a href="#pageByPage" class="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-indigo-100 text-slate-800 hover:text-indigo-800 transition">
+          <i class="fa-solid fa-book-open mr-1.5 text-indigo-600"></i>Pages 65-81 Sections
+        </a>
+        <a href="#eightyPoints" class="px-3.5 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-800 transition border border-indigo-300">
+          <i class="fa-solid fa-list-ol mr-1.5 text-indigo-600"></i>80 Key Concepts (Telugu)
+        </a>
+        <a href="#eightyGlossary" class="px-3.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 transition border border-emerald-300">
+          <i class="fa-solid fa-spell-check mr-1.5 text-emerald-600"></i>80 Glossary Terms &amp; Sentences
+        </a>
+        <a href="#improveYourLearning" class="px-3.5 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 transition border border-amber-300">
+          <i class="fa-solid fa-clipboard-question mr-1.5 text-amber-600"></i>Improve Your Learning (Full)
+        </a>
+        <a href="#suggestedExperiments" class="px-3.5 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-900 transition border border-sky-300">
+          <i class="fa-solid fa-flask-vial mr-1.5 text-sky-600"></i>Suggested Experiments
+        </a>
+        <a href="#projectWorks" class="px-3.5 py-1.5 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-900 transition border border-teal-300">
+          <i class="fa-solid fa-diagram-project mr-1.5 text-teal-600"></i>Project Works
+        </a>
+        <a href="#golcondaFort" class="px-3.5 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-900 transition border border-rose-300">
+          <i class="fa-solid fa-archway mr-1.5 text-rose-600"></i>Golconda Fort Marvel
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+  <main class="relative z-10 flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION BANNER -->
+    <section id="overview" class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-950 via-indigo-900 to-slate-900 text-white p-6 sm:p-10 shadow-2xl border-2 border-indigo-700">
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-black bg-amber-400 text-slate-950 shadow">
+            <i class="fa-solid fa-award"></i> JACOB GAPP SCHOOL, PALADUGU
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-extrabold bg-indigo-500/30 text-indigo-100 border border-indigo-400/30">
+            <i class="fa-solid fa-user-check"></i> Curator: Bro. Balaswamy
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+            <i class="fa-solid fa-lock-open"></i> Full Document Unlocked
+          </span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+          Physical Sciences - Chapter 5: SOUND <span class="text-amber-300">(ధ్వని)</span>
+        </h2>
+        <p class="text-base sm:text-lg text-indigo-100 leading-relaxed font-normal">
+          An open, highly accessible bilingual learning guide covering the entire chapter from Page 65 through Page 82. Explore theory, 80 Telugu concepts with examples, 80 glossary terms, every question from <strong>Improve Your Learning</strong>, all experiments, and the <strong>Golconda Fort</strong> acoustic marvel.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTER TOOLBAR -->
+    <div class="bg-white rounded-2xl p-5 shadow-sm border-2 border-slate-200 flex flex-col md:flex-row gap-4 items-center justify-between">
+      <div class="relative w-full md:w-96">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-slate-400 text-base"></i>
+        <input type="text" id="universalSearchInput" onkeyup="filterContent()" placeholder="Search terms, concepts, questions, Telugu words..."
+          class="w-full pl-11 pr-4 py-3 rounded-xl border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 text-base font-semibold">
+      </div>
+      <div class="flex flex-wrap items-center gap-2 w-full md:w-auto justify-end text-xs sm:text-sm font-bold text-slate-700">
+        <span>Language Display:</span>
+        <button onclick="toggleLang('both')" id="btnBoth" class="px-3.5 py-2 rounded-xl bg-indigo-600 text-white shadow-xs">English + తెలుగు</button>
+        <button onclick="toggleLang('en')" id="btnEn" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800">English Only</button>
+        <button onclick="toggleLang('te')" id="btnTe" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800">తెలుగు మాత్రమే</button>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 1: DETAILED PAGE-BY-PAGE CHAPTER BREAKDOWN ==================== -->
+    <section id="pageByPage" class="space-y-8">
+      <div class="border-b-2 border-slate-200 pb-3">
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 flex items-center gap-3">
+          <i class="fa-solid fa-book-bookmark text-indigo-600"></i>
+          Exhaustive Page-by-Page Chapter Breakdown (పేజీల వారీగా సమగ్ర పాఠ్యాంశం)
+        </h3>
+        <p class="text-sm text-slate-500 font-semibold mt-1">Class 8 Physical Sciences SCERT Chapter 5: Pages 65 to 81 with paragraph numbers &amp; Telugu descriptions.</p>
+      </div>
+
+      <!-- PAGES 65 to 81 CARDS -->
+      <div class="space-y-6">
+        <!-- Page 65 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 65: Production of Sound &amp; Activity 1-2
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Telangana SCERT Class 8</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (65.1 &amp; 65.2):</strong>
+              <p>We are constantly exposed to various sounds: chirping birds, vehicular traffic, musical instruments, and conversation. Sound is an omnipresent phenomenon vital for human communication.</p>
+              <p><strong>Activity 1:</strong> Listening quietly and tabulating sounds (e.g. feeble barking of distant dog, bell ringing).</p>
+              <p><strong>Activity 2:</strong> A student facing the blackboard identifies sources solely from acoustic sound signatures: "Gala Gala" (stones rattling in a metal box), "Eela" (whistling from mouth), scale striking a table, shoes thumping on the ground.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (65.1 &amp; 65.2):</strong>
+              <p>రోజంతా మనం రకరకాల శబ్దాలు వింటుంటాం. పక్షుల కిలకిలారావాలు, వాహనాల రొద, మనుషుల మాటలు నిత్యం మన చుట్టూ ఉంటాయి. ధ్వని సర్వవ్యాప్తమైనది మరియు మానవ భావప్రసారానికి అత్యంత ప్రధాన సాధనం.</p>
+              <p><strong>కృత్యం 1 &amp; 2:</strong> కంటితో చూడకుండానే శబ్దం ఆధారంగా వస్తువులను గుర్తించడం. బ్లాక్‌బోర్డు వైపు నిల్చున్న విద్యార్థి పెట్టెలో రాళ్ళు కదిలించిన శబ్దాన్ని ('గల గల'), నోటి ఈల శబ్దాన్ని ('ఈల'), బల్లపై స్కేల్ కొట్టిన చప్పుడును సులభంగా పోల్చగలడు.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 66 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 66: Activity 3 - Vibrating Body Produces Sound
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Fig-1: Brass Bell Experiment</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (66.1):</strong>
+              <p>Take a brass bell (pooja bell or school bell). Ring the bell and listen carefully. Now touch the ringing bell tightly with your hand. The sound stops immediately.</p>
+              <p><strong>Core Inference:</strong> Vibrations produce sound. When you hold the bell firmly with your hand, the physical vibrations are mechanically dampened, immediately stopping the sound.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (66.1):</strong>
+              <p>పాఠశాల లేదా పూజ గదిలోని ఇత్తడి గంటను మోగించినప్పుడు అది స్పష్టమైన ధ్వనిని ఇస్తుంది. గంటను చేత్తో తాకినప్పుడు అది వేగంగా కంపిస్తున్నట్లు అనుభవమవుతుంది. గంటను చేతులతో గట్టిగా అదిమి పట్టుకున్నప్పుడు ఆ కంపనాలు ఆగిపోతాయి; వెనువెంటనే శబ్దం కూడా మూగబోతుంది. వస్తువు కంపిస్తున్నంత సేపే ధ్వని వెలువడుతుందని ఇది రుజువు చేస్తుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 67 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 67: Activities with Matchbox, Paper, Water Plate &amp; Hacksaw Blade
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Figs 2, 3, 4, 5</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (67.1):</strong>
+              <ul class="list-disc pl-4 space-y-1">
+                <li><strong>1. Matchbox &amp; Rubber Band:</strong> Plucking the stretched band creates an audible buzz with perceptible hand vibrations.</li>
+                <li><strong>2. Blowing Notebook Pages:</strong> Air stream flutters paper edges producing whistling sounds.</li>
+                <li><strong>3. Water Plate:</strong> Striking the metal plate rim creates concentric ripple waves on the water surface.</li>
+                <li><strong>4. Clamped Hacksaw Blade:</strong> Pressing and suddenly releasing the blade generates rapid to-and-fro vibrations and sustained sound.</li>
+              </ul>
+              <p><strong>Conclusion:</strong> A vibrating body invariably produces sound.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (67.1):</strong>
+              <p>నాలుగు అద్భుతమైన ప్రయోగాలు: (1) అగ్గిపెట్టెకు బిగించిన రబ్బరు పట్టీని మీటినప్పుడు అది కంపిస్తూ ఝుంకార నాదం చేస్తుంది. (2) పుస్తకపు కాగితాల మధ్య గాలి ఊదినప్పుడు కాగితాలు రెపరెపలాడుతూ ధ్వనిస్తాయి. (3) నీటి పళ్ళెం అంచున కొట్టినప్పుడు నీటిలో గుండ్రని అలలు లేచి కంపనాలను కంటికి చూపిస్తాయి. (4) ఇటుక కింద అదిమిపెట్టిన హ్యాక్-సా బ్లేడును మీటి వదిలితే అది వేగంగా పైకి కిందికి కదులుతూ శబ్దం చేస్తుంది. ఈ ప్రయోగాల ద్వారా కంపించే ప్రతి వస్తువూ ధ్వనిని పుట్టిస్తుందని నిర్ధారించవచ్చు.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 68 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 68: Activity 4 - Sound Has Energy &amp; Musical Instruments
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Fig-6: Dancing Sand Particles</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (68.1):</strong>
+              <p>A mobile phone is placed inside a cut plastic bottle covered with a tightly stretched balloon diaphragm. Sand grains or sugar crystals are sprinkled on top. When music plays loudly, sound waves hit the membrane, transferring mechanical kinetic energy causing the sand grains to bounce/dance.</p>
+              <p><strong>Inference:</strong> Sound has genuine mechanical energy to perform work.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (68.1):</strong>
+              <p>కత్తిరించిన ప్లాస్టిక్ సీసాలో మొబైల్ ఉంచి, మూతికి బెలూన్ పొరను బిగుతుగా కట్టి, దానిపై ఇసుక లేదా చక్కెర రేణువులను ఉంచాలి. మొబైల్‌లో ఎక్కువ శబ్దంతో పాటలు పెట్టినప్పుడు బెలూన్ పొర కంపిస్తూ ఇసుక రేణువులను పైపైకి ఎగిరేలా చేస్తుంది. ధ్వని తరంగాలు తీసుకెళ్లే యాంత్రిక శక్తి బెలూన్ పొరకు బదిలీ కావడం వల్లే రేణువులు నాట్యం చేస్తాయి. కాబట్టి ధ్వనికి పదార్థాన్ని కదిలించే శక్తి ఉందని స్పష్టమవుతుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 69 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 69: Table 3, Rainfall Sound Activity 5 &amp; Jalatarang Activity 6
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Fig-8: Jalatarang</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (69.1):</strong>
+              <p><strong>Table 3:</strong> In Tabla, both the stretched membrane and the enclosed air body vibrate together. In Flute, air columns vibrate.</p>
+              <p><strong>Activity 5:</strong> Clapping progressively from one finger to four fingers and reversing simulates the start and retreat of rainfall.</p>
+              <p><strong>Activity 6 (Jalatarang):</strong> Metal bowls filled with varying water levels struck with a spoon produce distinct musical notes. Altering water level alters the vibrating air/water column, changing sound pitch.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (69.1):</strong>
+              <p><strong>పట్టిక 3:</strong> తబలాలో చర్మపు పొరతో పాటు లోపలి గాలి బోలు భాగం కూడా కంపిస్తుంది. వేణువులో వాయు స్తంభం కంపిస్తుంది.</p>
+              <p><strong>కృత్యం 5:</strong> అరచేతిపై ఒక వేలు, రెండు వేళ్ళు, మూడు, నాలుగు వేళ్ళతో చప్పట్లు క్రమంగా పెంచుతూ తగ్గిస్తే వర్షం మొదలవడం, తగ్గడం లాంటి శబ్దం వస్తుంది.</p>
+              <p><strong>కృత్యం 6 (జలతరంగిణి):</strong> వేర్వేరు పరిమాణాల్లో నీరు నింపిన గిన్నెలపై చెంచాతో కొట్టినప్పుడు శ్రావ్యమైన విభిన్న స్వరాలు పుడతాయి. గిన్నెలోని నీటి మట్టం మారేకొద్దీ గాలి స్తంభం పొడవు మారి కంపన పౌనఃపున్యం మారుతుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 70 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 70: Musical Maestros &amp; Sound Produced by Humans
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Ustad Bismillah Khan &amp; Veena Chitti Babu</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (70.1):</strong>
+              <p><strong>Ustad Bismillah Khan:</strong> World-renowned Shehnai maestro born in Bihar, mastered the instrument in holy Varanasi on the banks of the Ganges.</p>
+              <p><strong>Chitti Babu:</strong> Celebrated classical Veena maestro of Carnatic music. His name became synonymous with the Veena.</p>
+              <p><strong>Human Speech:</strong> Animals use primitive communication sounds (e.g. honeybees buzz to signal flowers). Humans organize sounds into speech using throat vibrations.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (70.1):</strong>
+              <p><strong>భారతరత్న బిస్మిల్లా ఖాన్:</strong> షెహనాయ్ వాదనలో సాటిలేని ప్రావీణ్యం సంపాదించిన ప్రపంచ ప్రసిద్ధ కళాకారుడు. కాశీ విశ్వనాథ ఆలయంలో షెహనాయ్ వాయించి భారతీయ శాస్త్రీయ సంగీతాన్ని విశ్వవ్యాప్తం చేశారు.</p>
+              <p><strong>వీణా చిట్టిబాబు:</strong> కర్ణాటక సంగీతంలో వీణా నాదానికి చిరునామాగా నిలిచిన అపురూప విద్వాంసుడు.</p>
+              <p><strong>మానవ సంభాషణ:</strong> జంతువులు ప్రాథమిక శబ్దాలతో సమాచారం ఇచ్చుకుంటే (తేనెటీగలు పువ్వులను చూసినప్పుడు నాట్యం చేస్తూ శబ్దం చేస్తాయి), మానవులు స్వరపేటిక ద్వారా శబ్దాలను క్రమపద్ధతిలో అమర్చి భాషగా మలిచి మాట్లాడుతారు.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 71 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 71: Anatomy of Larynx &amp; Vocal Cords
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Figs 9 &amp; 10 (Opened/Closed Cords)</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (71.1):</strong>
+              <p>The Larynx (voice box) contains two muscular ligaments called vocal cords stretched across with a narrow slit between them.</p>
+              <p><strong>Breathing vs Speaking:</strong> Vocal cords open wide during inhalation; they close when speaking, and air from lungs forces through the slit causing cords to vibrate.</p>
+              <p><strong>Dimensions:</strong> Men ~20 mm; Women ~15 mm (5 mm less); Children even shorter. Shorter cords produce higher pitch.</p>
+              <p><strong>Activity 7:</strong> Blowing across a stretched chocolate wrapper simulates vocal cord vibration.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (71.1):</strong>
+              <p>గొంతులోని స్వరపేటిక (లారింక్స్) లో రెండు స్వరతంత్రులు (వోకల్ కార్డ్స్) ఉంటాయి. శ్వాస తీసుకునేటప్పుడు ఇవి తెరుచుకుని గాలికి దారిస్తాయి. మాట్లాడేటప్పుడు ఇవి దగ్గరకు జరిగి సన్నని చీలికను ఏర్పరుస్తాయి. ఊపిరితిత్తుల నుండి వచ్చే గాలి ఆ చీలిక గుండా తోయబడినప్పుడు స్వరతంత్రులు కంపిస్తూ మాటను పుట్టిస్తాయి.</p>
+              <p>పురుషులలో వీటి పొడవు దాదాపు 20 మి.మీ, స్త్రీలలో 5 మి.మీ తక్కువగా (15 మి.మీ), పిల్లల్లో ఇంకా చిన్నగా ఉండటం వల్ల వారి గొంతులలో విభిన్న శృతులు (పిచ్) ఉంటాయి.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 72 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 72: Ventriloquism, Mimicry &amp; Sound Propagation in Solids
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Telangana Artistes &amp; Bench Tap Experiment</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (72.1):</strong>
+              <p><strong>Ventriloquists:</strong> Speak without moving lips through breath control and diaphragm mastery. Chinchapattana Gomatham Srinivas of Warangal performed 6000+ shows and set a 32-hour non-stop mimicry world record in 1990.</p>
+              <p><strong>Dr. Nerella Venu Madhav:</strong> World-famous mimicry artist from Warangal honored with Padma Shree in 2001.</p>
+              <p><strong>Activity 8:</strong> Striking one end of a wooden table while a student keeps their ear directly on the wood transmits sound far louder than through air.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (72.1):</strong>
+              <p>వరంగల్ జిల్లాకు చెందిన చించపట్టణ గోమఠం శ్రీనివాస్ పెదవులు కదపకుండా మాట్లాడే వెంక్రిలాక్విజంలో 32 గంటల ప్రపంచ రికార్డు సృష్టించారు. పద్మశ్రీ డాక్టర్ నేరెళ్ళ వేణుమాధవ్ అంతర్జాతీయ ఖ్యాతి పొందిన మిమిక్రీ దిగ్గజం.</p>
+              <p><strong>ఘన పదార్థాల్లో ప్రసారం:</strong> బల్ల ఒక చివర చెవి ఆనించి రెండో వైపు పెన్సిల్‌తో మెల్లగా తట్టినప్పుడు శబ్దం గాలికంటే కర్ర ద్వారా ఎంతో స్పష్టంగా వినిపిస్తుంది. ఘన పదార్థాల్లో ధ్వని చాలా వేగంగా ప్రయాణిస్తుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 73 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 73: Toy Phone &amp; Sound Propagation in Liquids
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Fig-13 (Cup Phone) &amp; Fig-14 (Stones in Water)</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (73.1):</strong>
+              <p><strong>Toy Telephone:</strong> Two paper cups connected by a taut string transmit vocal vibrations through the solid string.</p>
+              <p><strong>Activity 9:</strong> Striking two stones together inside a water bucket while holding an ear to the bucket wall allows sound to be heard clearly.</p>
+              <p><strong>Conclusion:</strong> Sound travels through solids, liquids, and gases.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (73.1):</strong>
+              <p>పేపర్ కప్పులు-దారంతో చేసిన ఆట ఫోన్ ఘన పదార్థాల గుండా ధ్వని ప్రయాణిస్తుందని నిరూపిస్తుంది. నీటి బకెట్ లోపల రెండు రాళ్ళను కొట్టినప్పుడు చెవిని బకెట్ అంచుకు తాకిస్తే శబ్దం స్పష్టంగా వినిపిస్తుంది. కాబట్టి ఘన, ద్రవ, వాయు మూడు భౌతిక స్థితుల్లోనూ ధ్వని ప్రసరిస్తుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 74 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 74: Sound Needs a Medium (Vacuum Test) &amp; How We Hear
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Fig-15: Tumbler Vacuum &amp; Ear Pinna</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (74.1):</strong>
+              <p><strong>Activity 10:</strong> A ringing phone in a dry glass covered by a plate has audible sound. As air is sucked out tightly with the mouth, volume decreases drastically. In complete vacuum, no sound can be heard.</p>
+              <p><strong>How we hear:</strong> The ear consists of outer, middle, and inner sections. Pinna collects atmospheric vibrations and directs them into the ear canal.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (74.1):</strong>
+              <p>గాజు గ్లాసులో రింగ్ అవుతున్న మొబైల్ ఉంచి, గాలిని పీల్చినప్పుడు గాలి తగ్గి శబ్దం క్రమంగా క్షీణిస్తుంది. గాలిని పూర్తిగా తొలగిస్తే (శూన్యం ఏర్పడితే) శబ్దం అస్సలు వినిపించదు. ధ్వని ప్రసారానికి యానకం తప్పనిసరి. మన బాహ్య చెవిలోని 'చెవి దొప్ప' (పిన్నా) పరిసరాల నుండి ఈ తరంగాలను సేకరించి శ్రవణ కుహరంలోకి పంపుతుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 75 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 75: Eardrum, Ear Ossicles, Cochlea &amp; Loudness
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Fig-16: Anatomy of Human Ear</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (75.1):</strong>
+              <p><strong>Middle Ear Bones:</strong> Malleus (hammer), Incus (anvil), and Stapes (stirrup) magnify vibrations.</p>
+              <p><strong>Oval Window:</strong> Area is 1/20th of the eardrum, increasing pressure 30 to 60 times.</p>
+              <p><strong>Cochlea:</strong> Filled with fluid; tiny hair cells convert fluid motion into electrical signals sent via auditory nerves to the brain.</p>
+              <p><strong>Loudness &amp; Feebleness:</strong> Drums produce loud sounds; assembly pledge is feeble.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (75.1):</strong>
+              <p>ధ్వని కంపనాలు కర్ణభేరిని తాకగానే మధ్య చెవిలోని మూడు ఎముకలు - కూటకము (సుత్తి), దాగి (అన్విల్), కర్ణవలయము/స్తాపెస్ (రికాబు) - ఈ కంపనాలను వర్ధనం చేస్తాయి. అండాకార కిటికీ వైశాల్యం కర్ణభేరిలో 1/20 వంతు మాత్రమే ఉండటంతో కంపనాలు 30 నుండి 60 రెట్లు పెరుగుతాయి. లోపలి చెవిలోని కోక్లియా ద్రవాలలోని రోమ కణాలు వీటిని విద్యుత్ సంకేతాలుగా మార్చి మెదడుకు చేరవేస్తాయి.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 76 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 76: Lab Activity 1 - Amplitude, Mean Position &amp; Loudness
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Figs 17 &amp; 18 (Table 4)</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (76.1):</strong>
+              <p><strong>Lab Activity 1:</strong> Scale/blade clamped under brick on table. Initial rest position is Mean Position (OA). Maximum displacement (OA to OB or OA to OC) is called Amplitude.</p>
+              <p>Small Force &rarr; Small Amplitude &rarr; Feeble Sound.<br>Large Force &rarr; Large Amplitude &rarr; Loud Sound.</p>
+              <p><strong>Conclusion:</strong> Loudness is determined directly by amplitude of vibration.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (76.1):</strong>
+              <p>స్కేలు మొదట నిశ్చలంగా ఉన్న స్థితిని 'మధ్యస్థ స్థానం' (OA) అంటారు. మధ్యస్థ స్థానం నుండి ఇరువైపులా జరిగే లయబద్ధ చలనాన్ని ఒక కంపనం అంటారు. మధ్యస్థ స్థానం నుండి పొందే గరిష్ట స్థానభ్రంశాన్ని 'కంపన పరిమితి' (యాంప్లిట్యూడ్) అంటారు. తక్కువ బలం ఉపయోగిస్తే తక్కువ కంపన పరిమితితో సన్నని ధ్వని, ఎక్కువ బలం ఉపయోగిస్తే ఎక్కువ కంపన పరిమితితో తీవ్రమైన (బిగ్గర) ధ్వని పుడుతుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 77 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 77: Decibel Scale (dB) &amp; Lab Activity 2 (Pitch)
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Fig-19 (Hacksaw Blades)</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (77.1):</strong>
+              <p><strong>Decibel (dB):</strong> Unit of sound intensity named after Alexander Graham Bell. 0 dB = silence threshold; 10 dB = 10x; 20 dB = 100x; 30 dB = 1000x.</p>
+              <ul class="list-disc pl-4 text-xs space-y-0.5">
+                <li>Whisper: 15 dB | Normal conversation: 60 dB | Lawnmower: 90 dB</li>
+                <li>Car horn: 110 dB | Jet engine: 120 dB | Gunshot: 140 dB</li>
+              </ul>
+              <p><strong>Lab Activity 2:</strong> 5cm blade vibrates far faster and produces shriller sound than 20cm blade.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (77.1):</strong>
+              <p>ధ్వని తీవ్రతను డెసిబెల్ (dB) లలో కొలుస్తారు. ప్రతి 10 dB పెరుగుదలకు తీవ్రత 10 రెట్లు పెరుగుతుంది (20 dB అంటే 100 రెట్లు, 30 dB అంటే 1,000 రెట్లు). సంభాషణ 60 dB, కార్ హారన్ 110 dB, జెట్ ఇంజన్ 120 dB.</p>
+              <p><strong>ల్యాబ్ కృత్యం 2:</strong> 5 సెం.మీ బయటకు ఉన్న చిన్న బ్లేడు ఎక్కువ కంపనాలు చేస్తూ కీచు ధ్వనిని (హై పిచ్), 20 సెం.మీ బ్లేడు తక్కువ కంపనాలతో బొంగురు ధ్వనిని (లో పిచ్) ఇస్తుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 78 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 78: Frequency, Pitch &amp; Vocal Cord Pitch Order
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Ascending Voice Pitch</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (78.1):</strong>
+              <p><strong>Frequency:</strong> Number of vibrations per second. Shrillness is called Pitch. High frequency &rarr; High pitch; Low frequency &rarr; Low pitch.</p>
+              <p><strong>Voice Pitch Ascending Order:</strong><br>Lion &lt; Adult Man &lt; Adult Woman &lt; Child &lt; Infant &lt; Insect.</p>
+              <p>Birds make high pitch sounds; lions produce low-pitch roars.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (78.1):</strong>
+              <p>ఒక సెకనులో జరిగే కంపనాల సంఖ్యను 'పౌనఃపున్యం' (ఫ్రీక్వెన్సీ) అంటారు. ధ్వని కీచుదనాన్ని 'శృతి' లేదా 'పిచ్' అంటారు. పౌనఃపున్యం ఎక్కువైతే పిచ్ ఎక్కువ. పక్షి కిలకిలారావం ఎక్కువ పిచ్, సింహం గర్జన తక్కువ పిచ్.</p>
+              <p><strong>పిచ్ ఆరోహణ క్రమం:</strong> సింహం &lt; పురుషుడు &lt; స్త్రీ &lt; బాలుడు &lt; పసిపాప &lt; కీటకం.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 79 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 79: Speech Organs, Music vs Noise &amp; Audible Range
+            </span>
+            <span class="text-xs text-slate-400 font-bold">20 Hz - 20,000 Hz</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (79.1):</strong>
+              <p><strong>Speech Organs:</strong> Vocal cords, lips, teeth, tongue, nose, and throat produce words of mixed frequencies.</p>
+              <p><strong>Music vs Noise:</strong> Ordered, pleasant sounds are Music; irregular, discordant sounds are Noise.</p>
+              <p><strong>Audible Range:</strong> 20 to 20,000 vibrations/sec (Hz). Less than 20 Hz (infrasound) or above 20,000 Hz (ultrasound) are inaudible to humans.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (79.1):</strong>
+              <p>స్వరతంత్రులు, పెదవులు, దంతాలు, నాలుక, ముక్కు మరియు గొంతు కలిసి వివిధ పౌనఃపున్యాల అక్షరాలను పలుకుతాయి. వినడానికి ఇంపుగా ఉండే క్రమబద్ధ శబ్దాలు 'సంగీతం'; వినడానికి ఇబ్బంది కలిగించే అస్తవ్యస్త ధ్వనులు 'శబ్దం' (నాయిస్).</p>
+              <p>మానవుని శ్రవ్య అవధి 20 Hz నుండి 20,000 Hz వరకు మాత్రమే ఉంటుంది.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 80 -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 80: Sound Pollution &amp; Legends M.S. Subbulakshmi &amp; Ghantasala
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Noise Effects &amp; Control</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <strong class="text-indigo-900 block font-black text-base">English Text (80.1):</strong>
+              <p>Normal talk is ~60 dB; &gt;80 dB causes physical pain and hearing loss. Effects: sleeplessness, hypertension, elevated BP.</p>
+              <p><strong>Remedies:</strong> Vehicle silencers, quieter machinery, lowered TV volumes, planting acoustic buffer trees.</p>
+              <p><strong>Bharat Ratna M.S. Subbulakshmi:</strong> Renowned Carnatic music legend and philanthropist.<br>
+              <strong>Ghantasala Venkateswar Rao:</strong> Legendary playback singer and music director with over 10,000 songs.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-2 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">తెలుగు సమగ్ర వివరణ (80.1):</strong>
+              <p>సాధారణ సంభాషణ 60 dB; 80 dB దాటిన శబ్దం భౌతిక బాధ, నిద్రలేమి, రక్తపోటును కలిగిస్తుంది. నివారణకు సైలెన్సర్లు అమర్చాలి, చెట్లను నాటాలి.</p>
+              <p>గాన కోకిల ఎం.ఎస్. సుబ్బులక్ష్మి, గాన గంధర్వుడు ఘంటసాల గార్ల అపార సేవలు సంగీత ప్రపంచంలో చిరస్మరణీయం.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Page 81 Summary -->
+        <article class="page-block bg-white rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="flex flex-wrap items-center justify-between border-b pb-3 border-slate-200 gap-2">
+            <span class="font-black text-sm uppercase text-indigo-800 bg-indigo-50 border border-indigo-200 px-3.5 py-1 rounded-full">
+              📄 Page 81: Key Words &amp; What We Have Learnt (All 11 Points)
+            </span>
+            <span class="text-xs text-slate-400 font-bold">Summary Review</span>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5 leading-relaxed text-sm">
+            <div class="lang-en bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-1.5">
+              <strong class="text-indigo-900 block font-black text-base">What We Have Learnt (All 11 Points):</strong>
+              <ol class="list-decimal pl-4 space-y-1">
+                <li>Vibrating body produces sound.</li>
+                <li>Human beings produce sound with the help of vocal cords.</li>
+                <li>Sound travels through solids, liquids, and gases; it cannot travel through vacuum.</li>
+                <li>The vibration of the eardrum gives us the sense of hearing.</li>
+                <li>Loudness and feebleness are determined by amplitude of vibration.</li>
+                <li>Intensity of sound is measured in dB (decibels).</li>
+                <li>Pitch or shrillness is determined by frequency.</li>
+                <li>The number of vibrations per second is called frequency.</li>
+                <li>Normal sounds consist of mixed frequencies.</li>
+                <li>The hearing limit of sound by humans is called audible range (20 Hz - 20000 Hz).</li>
+                <li>Pleasant sounds are music; unpleasant sounds are noise.</li>
+              </ol>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 telugu-font space-y-1.5 text-indigo-950">
+              <strong class="text-indigo-900 block font-black text-base">మనం ఏమి నేర్చుకున్నాం? (11 సారాంశ సూత్రాలు):</strong>
+              <ol class="list-decimal pl-4 space-y-1">
+                <li>కంపించే వస్తువు ధ్వనిని ఉత్పత్తి చేస్తుంది.</li>
+                <li>స్వరతంత్రుల సహాయంతో మానవులు ధ్వనిని పుట్టిస్తారు.</li>
+                <li>ధ్వని ఘన, ద్రవ, వాయువులలో ప్రసరిస్తుంది; శూన్యంలో ప్రయాణించలేదు.</li>
+                <li>కర్ణభేరి కంపనాలు మనకు వినికిడి జ్ఞానాన్ని కలిగిస్తాయి.</li>
+                <li>ధ్వని తీవ్రత, క్షీణతలను కంపన పరిమితి నిర్ణయిస్తుంది.</li>
+                <li>ధ్వని తీవ్రతను డెసిబెల్స్ (dB) లో కొలుస్తారు.</li>
+                <li>పిచ్ లేదా కీచుదనాన్ని పౌనఃపున్యం నిర్ణయిస్తుంది.</li>
+                <li>సెకనుకు జరిగే కంపనాల సంఖ్యను పౌనఃపున్యం అంటారు.</li>
+                <li>సాధారణ ధ్వనులు మిశ్రమ పౌనఃపున్యాలను కలిగి ఉంటాయి.</li>
+                <li>మానవ వినికిడి పరిమితిని శ్రవ్య అవధి (20 Hz - 20000 Hz) అంటారు.</li>
+                <li>వినసొంపైన ధ్వనులు సంగీతం; వినరాని కర్ణకఠోర ధ్వనులు శబ్దం (నాయిస్).</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2: 80 MASTER KEY CONCEPTS ==================== -->
+    <section id="eightyPoints" class="space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between border-b-2 border-slate-200 pb-3 gap-2">
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-black text-slate-900 flex items-center gap-3">
+            <i class="fa-solid fa-list-check text-indigo-600"></i>
+            80 Master Key Points with Long Telugu Explanations &amp; Examples
+          </h3>
+          <p class="text-sm text-slate-500 font-semibold">80 ముఖ్యమైన అంశాలు - సులభమైన ఉదాహరణలతో సమగ్ర వివరణలు</p>
+        </div>
+        <span class="text-xs font-black bg-indigo-100 text-indigo-800 px-3.5 py-1.5 rounded-full self-start md:self-auto">
+          Points 1 to 80 Complete
+        </span>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="eightyPointsContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: 80 GLOSSARY TERMS ==================== -->
+    <section id="eightyGlossary" class="space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between border-b-2 border-slate-200 pb-3 gap-2">
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-black text-slate-900 flex items-center gap-3">
+            <i class="fa-solid fa-book-atlas text-emerald-600"></i>
+            80 Scientific Glossary Vocabulary Terms with Contextual Sentences
+          </h3>
+          <p class="text-sm text-slate-500 font-semibold">80 ధ్వని శాస్త్ర పదకోశం - ఆంగ్ల మరియు తెలుగు వాక్య ప్రయోగాలతో</p>
+        </div>
+        <span class="text-xs font-black bg-emerald-100 text-emerald-800 px-3.5 py-1.5 rounded-full self-start md:self-auto">
+          80 Terms &amp; Examples
+        </span>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="glossaryContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: EXHAUSTIVE "IMPROVE YOUR LEARNING" EXERCISES (Pages 81-82) ==================== -->
+    <section id="improveYourLearning" class="space-y-8">
+      <div class="border-b-2 border-slate-200 pb-3">
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 flex items-center gap-3">
+          <i class="fa-solid fa-graduation-cap text-amber-600"></i>
+          Complete "Improve Your Learning" Exercises (Pages 81–82)
+        </h3>
+        <p class="text-sm text-slate-500 font-semibold mt-1">Every textbook exercise fully solved with academic standard tags (AS1 to AS7) and dual-language descriptions.</p>
+      </div>
+
+      <!-- Part I: Reflections on Concepts -->
+      <div class="space-y-6">
+        <h4 class="text-lg font-black text-indigo-900 bg-indigo-50 border-l-4 border-indigo-600 px-4 py-2 rounded-r-xl">
+          I. Reflections on Concepts (భావనలపై ప్రతిస్పందనలు)
+        </h4>
+
+        <!-- Q1 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Reflections on Concepts - Q1 (AS1)</span>
+            <button onclick="readAloud('How can you explain that sound has energy?')" class="text-slate-400 hover:text-indigo-600 text-sm">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q1: How can you explain that sound has energy? (AS1)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 1: ధ్వనికి శక్తి ఉందని నీవు ఎలా వివరించగలవు?</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              We can demonstrate that sound has energy through <strong>Activity 4</strong>:
+              <ol class="list-decimal pl-4 space-y-1 mt-1">
+                <li>Take a cut plastic bottle and stretch a balloon tightly across its mouth to form a diaphragm.</li>
+                <li>Sprinkle sugar crystals or fine sand particles on top of the stretched balloon.</li>
+                <li>Place a cell phone inside the bottle playing songs at high volume.</li>
+                <li><strong>Observation:</strong> As music plays, the sand particles dance and bounce vigorously. When the music stops, the particles become stationary.</li>
+                <li><strong>Inference:</strong> The acoustic waves generated by the mobile phone vibrate the balloon membrane, transferring mechanical kinetic energy to the sand grains. Hence, sound is a form of energy.</li>
+              </ol>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              కృత్యం-4 ద్వారా ధ్వనికి శక్తి ఉందని నిరూపించవచ్చు:
+              <ol class="list-decimal pl-4 space-y-1 mt-1">
+                <li>ఒక ప్లాస్టిక్ సీసా పైభాగాన్ని కత్తిరించి, మూతిపై బెలూన్ పొరను బిగుతుగా కట్టి డయాఫ్రమ్ లాగా చేయాలి.</li>
+                <li>దానిపై కొన్ని చక్కెర లేదా ఇసుక రేణువులను ఉంచాలి.</li>
+                <li>సీసా లోపల మొబైల్ ఫోన్ ఉంచి ఎక్కువ శబ్దంతో పాటలు పెట్టాలి.</li>
+                <li><strong>పరిశీలన:</strong> పాటలు మోగుతున్నంత సేపు బెలూన్ పొర కంపిస్తూ దానిపై ఉన్న ఇసుక రేణువులను పైకి కిందకి ఎగురుతూ నాట్యం చేయిస్తుంది.</li>
+                <li><strong>నిర్ధారణ:</strong> ధ్వని తరంగాలు తీసుకెళ్ళే యాంత్రిక శక్తి బెలూన్ పొరకు బదిలీ కావడం వల్లే రేణువులు కదులుతాయి. కాబట్టి ధ్వనికి శక్తి ఉందని రుజువవుతుంది.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Reflections on Concepts - Q2 (AS1)</span>
+            <button onclick="readAloud('Write the unit to measure the sound intensity.')" class="text-slate-400 hover:text-indigo-600 text-sm">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q2: Write the unit to measure the sound intensity. (AS1)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 2: ధ్వని తీవ్రతను కొలిచే ప్రమాణాన్ని రాయండి.</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              The unit used to measure the intensity or loudness of sound is the <strong>Decibel</strong>, denoted as <strong>dB</strong>. It is named in honor of <strong>Alexander Graham Bell</strong> (1847–1942), whose pioneering research in acoustics led to the invention of the telephone.
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              ధ్వని తీవ్రతను కొలిచే ప్రమాణం <strong>డెసిబెల్ (Decibel)</strong>. దీని సంకేతం <strong>dB</strong>. టెలిఫోన్‌ను కనిపెట్టిన సుప్రసిద్ధ శాస్త్రవేత్త అలెగ్జాండర్ గ్రాహం బెల్ (1847–1942) గౌరవార్థం ఈ ప్రమాణాన్ని నిర్ణయించారు.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Reflections on Concepts - Q3 (AS1)</span>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q3: Write the differences between noise and music? (AS1)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 3: సంగీతానికి మరియు శబ్దానికి (రొద) మధ్య గల తేడాలను రాయండి.</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left border border-slate-300">
+                  <tr class="bg-indigo-100 font-bold">
+                    <th class="p-2 border">Feature</th>
+                    <th class="p-2 border">Music</th>
+                    <th class="p-2 border">Noise</th>
+                  </tr>
+                  <tr>
+                    <td class="p-2 border font-bold">Nature</td>
+                    <td class="p-2 border">Regular, ordered periodic vibrations.</td>
+                    <td class="p-2 border">Irregular, discordant, non-periodic vibrations.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2 border font-bold">Sensation</td>
+                    <td class="p-2 border">Pleasant, soothing, and enjoyable to the ear.</td>
+                    <td class="p-2 border">Harsh, irritating, unpleasant, and painful.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2 border font-bold">Examples</td>
+                    <td class="p-2 border">Flute, Veena, Violin, classical vocals.</td>
+                    <td class="p-2 border">Traffic horns, metal plate dropping, stone crushing.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left border border-indigo-200">
+                  <tr class="bg-indigo-100 font-bold">
+                    <th class="p-2 border">లక్షణం</th>
+                    <th class="p-2 border">సంగీతం (Music)</th>
+                    <th class="p-2 border">శబ్దం / రొద (Noise)</th>
+                  </tr>
+                  <tr>
+                    <td class="p-2 border font-bold">కంపన స్వభావం</td>
+                    <td class="p-2 border">క్రమబద్ధమైన, నియమిత కాలవ్యవధుల్లో జరిగే కంపనాలు.</td>
+                    <td class="p-2 border">అస్తవ్యస్తమైన, అపశ్రుతితో కూడిన లయలేని కంపనాలు.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2 border font-bold">చెవిపై అనుభూతి</td>
+                    <td class="p-2 border">వినడానికి ఆహ్లాదకరంగా, ఇంపుగా, మనసుకు హాయిగా ఉంటుంది.</td>
+                    <td class="p-2 border">వినడానికి అసహ్యకరంగా, విసుగు మరియు తలనొప్పి కలిగిస్తుంది.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2 border font-bold">ఉదాహరణలు</td>
+                    <td class="p-2 border">పిల్లనగ్రోవి, వీణ, వయోలిన్, గాత్ర కచేరీ.</td>
+                    <td class="p-2 border">ట్రాఫిక్ హారన్లు, కిందపడ్డ స్టీలు పళ్ళెం, సైలెన్సర్ లేని వాహనం.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Reflections on Concepts - Q4 (AS1)</span>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q4: Explain the sources which produce sound pollution in your surroundings. (AS1)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 4: మీ పరిసరాలలో శబ్ద కాలుష్యాన్ని కలుగజేసే వివిధ మూలాలను వివరించండి.</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              Major sources of sound pollution in surrounding communities include:
+              <ul class="list-disc pl-4 space-y-1">
+                <li><strong>Road Traffic:</strong> Continuous honking of pressure horns, diesel engines of trucks, buses, motorbikes without silencers.</li>
+                <li><strong>Industrial &amp; Mining Sites:</strong> Heavy stone crushers, power looms, grinding machines, metal forging, blasting operations.</li>
+                <li><strong>Construction Works:</strong> Concrete mixers, pneumatic jackhammers, drilling machines, cranes.</li>
+                <li><strong>Public Celebrations:</strong> High-decibel DJ sound systems, amplifiers at functions, bursting high-intensity firecrackers during festivals.</li>
+                <li><strong>Domestic Appliances:</strong> Food mixers/grinders, washing machines, vacuum cleaners, desert coolers, high-volume TV sets.</li>
+              </ul>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              మన పరిసరాల్లో శబ్ద కాలుష్యానికి కారణమయ్యే ప్రధాన వనరులు:
+              <ul class="list-disc pl-4 space-y-1">
+                <li><strong>రవాణా సాధనాలు:</strong> లారీలు, బస్సులు, ఆటోలు మరియు సైలెన్సర్ లేని ద్విచక్ర వాహనాల నుండి వచ్చే విపరీతమైన హారన్ల రొద.</li>
+                <li><strong>పరిశ్రమలు &amp; గనులు:</strong> రాళ్ళు పగులగొట్టే క్రషర్లు, భారీ యంత్రాలు, గ్రైండింగ్ మిషన్లు, మైనింగ్ పేలుళ్లు.</li>
+                <li><strong>భవన నిర్మాణ పనులు:</strong> కాంక్రీట్ మిక్సర్లు, డ్రిల్లింగ్ యంత్రాలు, రోడ్లను తవ్వే జాక్ హ్యామర్లు.</li>
+                <li><strong>వేడుకలు &amp; ఉత్సవాలు:</strong> వివాహాలు, ఊరేగింపులలో వాడే పెద్ద డీజే లౌడ్‌స్పీకర్లు, దీపావళి టపాసులు.</li>
+                <li><strong>గృహోపకరణాలు:</strong> మిక్సర్లు, గ్రైండర్లు, వాషింగ్ మెషీన్లు, వాటర్ మోటార్లు, పెద్ద శబ్దంతో పెట్టే టీవీలు.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part II: Application of Concepts -->
+      <div class="space-y-6">
+        <h4 class="text-lg font-black text-indigo-900 bg-indigo-50 border-l-4 border-indigo-600 px-4 py-2 rounded-r-xl">
+          II. Application of Concepts (భావనల అనువర్తనం)
+        </h4>
+
+        <!-- App Q1 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Application of Concepts - Q1 (AS1)</span>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q1: The sounds of crickets (insects) make us close our ears. Why? (AS1)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 1: కీచురాళ్ళ శబ్దం విన్నప్పుడు మనం చెవులు మూసుకుంటాం. ఎందుకు?</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              Crickets produce sound by rubbing their specialized serrated wings together rapidly at high frequencies (called stridulation). This produces a sound with an extremely high pitch (shrillness). The human auditory eardrum and cochlea are intensely sensitive to sharp high frequencies; such prolonged shrillness triggers acoustic irritation and ear strain, making us instinctively close our ears.
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              కీచురాళ్ళు తమ రెక్కలను అతివేగంగా రాపిడి చేసుకోవడం ద్వారా శబ్దాన్ని పుట్టిస్తాయి. ఈ కంపనాల పౌనఃపున్యం చాలా ఎక్కువగా ఉండటం వలన వాటి శబ్దం అత్యంత అధిక శృతి (హై పిచ్ లేదా విపరీతమైన కీచుదనం) కలిగి ఉంటుంది. ఇంతటి సూది లాంటి కీచు ధ్వని మన కర్ణభేరికి అసౌకర్యాన్ని, వినికిడి బాధను కలిగిస్తుంది. అందువల్ల ఆ రొదను భరించలేక మనం చెవులు మూసుకుంటాం.
+            </div>
+          </div>
+        </div>
+
+        <!-- App Q2 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Application of Concepts - Q2 (AS1)</span>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q2: Write the names of any three musical instruments that you know and explain how they produce sound. (AS1)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 2: మీకు తెలిసిన ఏవైనా మూడు సంగీత వాయిద్యాల పేర్లు రాసి, అవి ధ్వనిని ఎలా ఉత్పత్తి చేస్తాయో వివరించండి.</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              <ol class="list-decimal pl-4 space-y-2">
+                <li><strong>1. Flute (వేణువు - Wind Instrument):</strong> When a player blows air across the embouchure hole, the air column inside the hollow cylindrical body starts oscillating. Opening and closing tone holes changes column length, varying pitch.</li>
+                <li><strong>2. Tabla (తబలా - Membrane Instrument):</strong> Striking the stretched animal skin diaphragm with fingers causes it to vibrate. The hollow wooden body also resonates the enclosed air column simultaneously.</li>
+                <li><strong>3. Veena (వీణ - Stringed Instrument):</strong> Plucking the metallic strings causes them to vibrate transversally. These vibrations pass through the bridge into the hollow wooden gourd (kudam), which acts as a resonance chamber.</li>
+              </ol>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              <ol class="list-decimal pl-4 space-y-2">
+                <li><strong>1. పిల్లనగ్రోవి (వేణువు):</strong> దీని రంధ్రం ద్వారా గాలిని ఊదినప్పుడు వేణువు గొట్టం లోపలి 'వాయు స్తంభం' కంపిస్తుంది. వేళ్ళతో రంధ్రాలను మూస్తూ తెరుస్తూ ఉంటే గాలి స్తంభం పొడవు మారి వేర్వేరు స్వరాలు పలకబడతాయి.</li>
+                <li><strong>2. తబలా:</strong> చేతితో లేదా వేళ్ళతో బిగించిన చర్మపు పొరను తట్టినప్పుడు చర్మం కంపిస్తుంది. దీనితో పాటు తబలా లోపలి బోలు భాగంలోని గాలి కూడా కంపిస్తూ గంభీరమైన నాదాన్ని ఇస్తుంది.</li>
+                <li><strong>3. వీణ:</strong> వేలితో లోహపు తీగలను మీటినప్పుడు తీగలు వేగంగా కంపిస్తాయి. ఆ కంపనాలు బిజ్జీ ద్వారా బోలుగా ఉండే సొరకాయ బుర్ర లేదా చెక్క కుహరంలోకి చేరి అనునాదం చెంది శ్రావ్యమైన సంగీతాన్ని పుట్టిస్తాయి.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- App Q3 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Application of Concepts - Q3 (AS5)</span>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q3: Draw the figures depicting low amplitude and high amplitude. (AS5)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 3: అల్ప కంపన పరిమితి మరియు అధిక కంపన పరిమితిని చూపే చిత్రాలను గీయండి.</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+              <strong class="text-slate-800 block">Figure Illustrations (English Description):</strong>
+              <!-- SVG Wave Comparison -->
+              <div class="bg-white p-3 rounded-xl border border-slate-200 text-center">
+                <svg viewBox="0 0 400 180" class="w-full h-auto">
+                  <!-- Low Amplitude -->
+                  <text x="10" y="20" font-size="12" font-weight="bold" fill="#4338ca">Low Amplitude (Feeble Sound - అల్ప కంపన పరిమితి)</text>
+                  <line x1="10" y1="50" x2="390" y2="50" stroke="#94a3b8" stroke-dasharray="4"/>
+                  <path d="M 10 50 Q 60 25, 110 50 T 210 50 T 310 50 T 390 50" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+                  <line x1="60" y1="50" x2="60" y2="25" stroke="#ef4444" stroke-width="1.5"/>
+                  <text x="65" y="40" font-size="10" fill="#ef4444">Amp (చిన్నది)</text>
+
+                  <!-- High Amplitude -->
+                  <text x="10" y="105" font-size="12" font-weight="bold" fill="#4338ca">High Amplitude (Loud Sound - అధిక కంపన పరిమితి)</text>
+                  <line x1="10" y1="145" x2="390" y2="145" stroke="#94a3b8" stroke-dasharray="4"/>
+                  <path d="M 10 145 Q 60 85, 110 145 T 210 145 T 310 145 T 390 145" fill="none" stroke="#4338ca" stroke-width="3"/>
+                  <line x1="60" y1="145" x2="60" y2="85" stroke="#ef4444" stroke-width="2"/>
+                  <text x="65" y="115" font-size="10" fill="#ef4444" font-weight="bold">Amp (పెద్దది)</text>
+                </svg>
+              </div>
+              <p class="text-xs text-slate-600">The crest and trough heights depict amplitude. Greater crest height corresponds to louder sound.</p>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950 space-y-2">
+              <strong class="text-indigo-900 block">వివరణ (తెలుగు):</strong>
+              <p>పై చిత్రంలో చూసినట్లు:</p>
+              <ul class="list-disc pl-4 space-y-1 text-xs">
+                <li><strong>అల్ప కంపన పరిమితి:</strong> మధ్యస్థ రేఖ నుండి తరంగ శృంగం లేదా ద్రోణి ఎత్తు తక్కువగా ఉంటుంది. ఇది సన్నని లేదా క్షీణ ధ్వనిని సూచిస్తుంది.</li>
+                <li><strong>అధిక కంపన పరిమితి:</strong> మధ్యస్థ రేఖ నుండి తరంగం పొందే గరిష్ట ఎత్తు చాలా ఎక్కువగా ఉంటుంది. ఇది బిగ్గర లేదా తీవ్రమైన ధ్వనిని సూచిస్తుంది.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- App Q4 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">Application of Concepts - Q4 (AS3)</span>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q4: "Vibrations in a body produce sounds". How do you prove it? (AS3)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 4: "వస్తువులోని కంపనాలు ధ్వనిని పుట్టిస్తాయి" - దీనిని నీవు ఎలా నిరూపిస్తావు?</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              We prove this through the <strong>Tuning Fork &amp; Water Plate Experiment</strong>:
+              <ol class="list-decimal pl-4 space-y-1">
+                <li>Strike the prong of a metal tuning fork against a hard rubber pad. It produces a clear humming tone.</li>
+                <li>Touch the vibrating prongs to the surface of still water in a shallow dish.</li>
+                <li><strong>Observation:</strong> Water splashes vigorously and ripples radiate outward in all directions.</li>
+                <li>Grasp the prongs firmly with your fingers: the vibrations immediately stop, the water becomes calm, and the sound ceases instantaneously.</li>
+                <li><strong>Conclusion:</strong> Sound exists only as long as vibrations continue; damping the vibration extinguishes sound production immediately.</li>
+              </ol>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              <strong>శృతిదండం మరియు నీటి పళ్లెం ప్రయోగం:</strong>
+              <ol class="list-decimal pl-4 space-y-1">
+                <li>ఒక లోహపు శృతిదండాన్ని రబ్బరు ప్యాడ్‌పై కొట్టినప్పుడు అది శ్రావ్యమైన ధ్వనిని చేస్తుంది.</li>
+                <li>ధ్వనిస్తున్న శృతిదండం భుజాన్ని ఒక పళ్లెంలోని నిశ్చల నీటి ఉపరితలానికి తాకించాలి.</li>
+                <li><strong>పరిశీలన:</strong> నీటి తుంపర్లు పైకి చిమ్ముతాయి మరియు నీటిలో వేగవంతమైన వలయాకార అలలు ఏర్పడతాయి.</li>
+                <li>ఇప్పుడు శృతిదండాన్ని చేతితో గట్టిగా పట్టుకుంటే కంపనాలు ఆగిపోతాయి, నీటిలో తుంపర్లు ఆగిపోతాయి మరియు శబ్దం కూడా వెంటనే ఆగిపోతుంది.</li>
+                <li><strong>నిర్ధారణ:</strong> వస్తువు కంపిస్తున్నంత సేపే ధ్వని పుడుతుందని, కంపనాలు ఆగిపోతే ధ్వని ఆగిపోతుందని ఇది నిరూపిస్తుంది.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part III: Higher Order Thinking Questions (HOTs) -->
+      <div class="space-y-6">
+        <h4 class="text-lg font-black text-indigo-900 bg-indigo-50 border-l-4 border-indigo-600 px-4 py-2 rounded-r-xl">
+          III. Higher Order Thinking Questions (ఉన్నత స్థాయి ఆలోచనాత్మక ప్రశ్నలు)
+        </h4>
+
+        <!-- HOTs Q1 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">HOTs - Q1 (AS1)</span>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q1: What is the effect of humidity on quality of sound propagation? Is there any difference in propagation of sound in air during summer and winter seasons? Discuss. (AS1)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 1: ధ్వని ప్రసార నాణ్యతపై తేమ (హ్యుమిడిటీ) ప్రభావం ఏమిటి? వేసవి, చలికాలాల్లో గాలిలో ధ్వని ప్రసారంలో ఏమైనా తేడాలు ఉంటాయా? చర్చించండి.</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              <ul class="list-disc pl-4 space-y-1">
+                <li><strong>Effect of Humidity:</strong> Humid air contains water vapour ($H_2O$), whose molar mass (18 g/mol) is significantly less than dry air gases like Nitrogen ($N_2$, 28 g/mol) and Oxygen ($O_2$, 32 g/mol). Hence, moist air has lower density. Since sound velocity is inversely proportional to the square root of medium density ($v \propto \frac{1}{\sqrt{\rho}}$), sound travels faster and suffers less damping in humid air.</li>
+                <li><strong>Summer vs. Winter:</strong> In hot summer, high ground temperatures create air turbulence that scatters sound upward. In winter nights, cold dense air near the ground beneath warmer air layers forms temperature inversion that refracts sound downward toward the ground. Combined with winter humidity, distant sounds (like midnight train sirens or factory sirens) travel much further and are heard with remarkable clarity.</li>
+              </ul>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              <ul class="list-disc pl-4 space-y-1">
+                <li><strong>తేమ ప్రభావం:</strong> గాలిలో నీటి ఆవిరి (తేమ) పెరిగినప్పుడు గాలి సాంద్రత తగ్గుతుంది. సాంద్రత తగ్గినప్పుడు ధ్వని వేగం పెరుగుతుంది మరియు ధ్వని శక్తి త్వరగా క్షీణించదు. కాబట్టి తేమతో కూడిన గాలిలో ధ్వని వేగంగా, స్పష్టంగా ప్రసరిస్తుంది.</li>
+                <li><strong>వేసవి vs చలికాలం:</strong> వేసవి మధ్యాహ్నాలలో నేల బాగా వేడెక్కి గాలి అల్లకల్లోలంగా మారి శబ్దాలను పైకి వెదజల్లుతుంది. కానీ చలికాలపు రాత్రులలో నేల చల్లబడి, తేమ ఎక్కువగా ఉండి ధ్వని తరంగాలు వాతావరణంలో కిందికి వంగి నేల వెంబడి చాలా దూరం ప్రయాణిస్తాయి. అందుకే చలికాలపు రాత్రుల్లో దూరంగా వెళ్ళే రైలు కూత ఎంతో స్పష్టంగా మనకు వినిపిస్తుంది.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- HOTs Q2 -->
+        <div class="exercise-item bg-white p-6 rounded-3xl border-2 border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full">HOTs - Q2 (AS7)</span>
+          </div>
+          <h5 class="text-base font-extrabold text-slate-900">Q2: How does sound pollution affect Biodiversity? Explain. (AS7)</h5>
+          <p class="text-sm font-bold text-indigo-700 telugu-font">ప్రశ్న 2: శబ్ద కాలుష్యం జీవవైవిధ్యాన్ని ఎలా దెబ్బతీస్తుంది? వివరించండి.</p>
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm leading-relaxed">
+            <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <strong class="text-slate-800 block mb-1">Answer (English):</strong>
+              Sound pollution severely disrupts natural ecosystems and biodiversity:
+              <ol class="list-decimal pl-4 space-y-1">
+                <li><strong>Communication Masking:</strong> Birds, bats, and marine mammals rely on acoustic calls for mating, territory marking, and warning of predators. Loud ambient noise drowns out these critical signals.</li>
+                <li><strong>Navigation &amp; Echolocation Breakdown:</strong> Bats in urban areas fail to forage properly. Marine noise from ocean shipping and naval sonars disorients whales and dolphins, causing mass beach strandings.</li>
+                <li><strong>Reproductive Failure:</strong> Many animal species abandon breeding grounds near highways, quarries, and airports, leading to local population collapse.</li>
+                <li><strong>Stress &amp; Habitat Migration:</strong> Wildlife experiences elevated heart rates and stress hormone levels, driving sensitive bird species (like house sparrows) away from cities.</li>
+              </ol>
+            </div>
+            <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950">
+              <strong class="text-indigo-900 block mb-1">సమాధానం (తెలుగు):</strong>
+              శబ్ద కాలుష్యం మూగజీవులు మరియు ప్రకృతి సమతుల్యతపై చూపే తీవ్ర ప్రభావాలు:
+              <ol class="list-decimal pl-4 space-y-1">
+                <li><strong>సంకేతాల గ్రహింపు లోపం:</strong> పక్షులు, కీటకాలు తమ సహచరులను ఆకర్షించడానికి, పిల్లలకు ఆహారం అందించడానికి చేసే పిలుపులు మానవ రొదలో కలిసిపోయి గుర్తించలేకపోతాయి.</li>
+                <li><strong>గమ్యం తప్పిపోవడం:</strong> గబ్బిలాలు, డాల్ఫిన్లు మరియు తిమింగలాలు ధ్వని ఆధారిత ఎకోలొకేషన్ ద్వారా ప్రయాణిస్తాయి. నగరాల మరియు నౌకల శబ్దాల వల్ల అవి దిక్కుతోచక సముద్ర తీరాలకు కొట్టుకువచ్చి ప్రాణాలు కోల్పోతున్నాయి.</li>
+                <li><strong>పునరుత్పత్తి మందగించడం:</strong> తీవ్రమైన శబ్దాల భయంతో అడవి జంతువులు జతకట్టడం మానేస్తాయి, లేదా గుడ్లు పెట్టే ప్రశాంత ఆవాసాలను వదిలి పారిపోతాయి.</li>
+                <li><strong>పట్టణాల నుండి పక్షుల తరలింపు:</strong> అధిక శబ్ద కాలుష్యం తట్టుకోలేక పిచ్చుకలు, కోయిలలు వంటి సున్నిత పక్షులు నగరాల నుండి అంతరించిపోతున్నాయి.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part IV: Multiple Choice Questions (Page 82) -->
+      <div class="space-y-6">
+        <h4 class="text-lg font-black text-indigo-900 bg-indigo-50 border-l-4 border-indigo-600 px-4 py-2 rounded-r-xl">
+          IV. Multiple Choice Questions (Page 82 Textbook MCQs)
+        </h4>
+
+        <!-- MCQ 1 -->
+        <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white space-y-3">
+          <p class="font-black text-sm text-slate-900">
+            1. An object which moves to and fro motion from rest known as ______ [ <span class="text-indigo-700 font-extrabold">b</span> ]
+          </p>
+          <p class="text-xs font-semibold text-slate-500 telugu-font">నిశ్చల స్థితి నుండి ముందుకు వెనుకకు జరిగే చలనాన్ని ఏమంటారు?</p>
+          <div class="grid sm:grid-cols-2 gap-2 text-xs font-bold">
+            <div class="p-2.5 rounded-lg border bg-slate-50">a) Linear motion (సరళరేఖా చలనం)</div>
+            <div class="p-2.5 rounded-lg border bg-emerald-100 border-emerald-500 text-emerald-950 font-black">b) Vibration (కంపనం) &#10004;</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">c) Simple motion (సాధారణ చలనం)</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">d) Angular motion (కోణీయ చలనం)</div>
+          </div>
+          <p class="text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+            <strong>Scientific Reason:</strong> The to-and-fro periodic oscillation of a particle or body about its mean equilibrium position is defined as vibration.
+          </p>
+        </div>
+
+        <!-- MCQ 2 -->
+        <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white space-y-3">
+          <p class="font-black text-sm text-slate-900">
+            2. The number of vibrations produced per second is known as ______ [ <span class="text-indigo-700 font-extrabold">a</span> ]
+          </p>
+          <p class="text-xs font-semibold text-slate-500 telugu-font">ఒక సెకను కాలంలో ఉత్పత్తి అయ్యే కంపనాల సంఖ్యను ఏమంటారు?</p>
+          <div class="grid sm:grid-cols-2 gap-2 text-xs font-bold">
+            <div class="p-2.5 rounded-lg border bg-emerald-100 border-emerald-500 text-emerald-950 font-black">a) Frequency (పౌనఃపున్యం) &#10004;</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">b) Shrillness (కీచుదనం)</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">c) Vibration limit (కంపన అవధి)</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">d) Decibels (డెసిబెల్స్)</div>
+          </div>
+          <p class="text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+            <strong>Scientific Reason:</strong> Frequency ($f$) = $\frac{\text{Number of vibrations}}{\text{Time in seconds}}$. Its SI unit is Hertz (Hz).
+          </p>
+        </div>
+
+        <!-- MCQ 3 -->
+        <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white space-y-3">
+          <p class="font-black text-sm text-slate-900">
+            3. The audible sound range of man is ______ [ <span class="text-indigo-700 font-extrabold">b</span> ]
+          </p>
+          <p class="text-xs font-semibold text-slate-500 telugu-font">మానవుని శ్రవ్య ధ్వని పరిమితి ఎంత?</p>
+          <div class="grid sm:grid-cols-2 gap-2 text-xs font-bold">
+            <div class="p-2.5 rounded-lg border bg-slate-50">a) 10-10000 Vibrations/sec</div>
+            <div class="p-2.5 rounded-lg border bg-emerald-100 border-emerald-500 text-emerald-950 font-black">b) 20-20000 Vibrations/sec (Hz) &#10004;</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">c) 30-30000 Vibrations/sec</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">d) 40-40000 Vibrations/sec</div>
+          </div>
+          <p class="text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+            <strong>Scientific Reason:</strong> Frequencies below 20 Hz (infrasound) and above 20,000 Hz (ultrasound) cannot excite the human cochlear sensory hair cells.
+          </p>
+        </div>
+
+        <!-- MCQ 4 -->
+        <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white space-y-3">
+          <p class="font-black text-sm text-slate-900">
+            4. The oval window has the surface area ______ of the eardrum. [ <span class="text-indigo-700 font-extrabold">b</span> ]
+          </p>
+          <p class="text-xs font-semibold text-slate-500 telugu-font">అండాకార కిటికీ వైశాల్యం కర్ణభేరి వైశాల్యంలో ఎన్నో వంతు?</p>
+          <div class="grid sm:grid-cols-2 gap-2 text-xs font-bold">
+            <div class="p-2.5 rounded-lg border bg-slate-50">a) 1/10</div>
+            <div class="p-2.5 rounded-lg border bg-emerald-100 border-emerald-500 text-emerald-950 font-black">b) 1/20 (20 వ వంతు) &#10004;</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">c) 1/30</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">d) 1/40</div>
+          </div>
+          <p class="text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+            <strong>Scientific Reason:</strong> Because the oval window area is only 1/20th that of the tympanum, the acoustic pressure exerted by the stapes is amplified 30 to 60 times.
+          </p>
+        </div>
+
+        <!-- MCQ 5 -->
+        <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white space-y-3">
+          <p class="font-black text-sm text-slate-900">
+            5. The shrillness of a sound is known as ______ [ <span class="text-indigo-700 font-extrabold">a</span> ]
+          </p>
+          <p class="text-xs font-semibold text-slate-500 telugu-font">ధ్వని యొక్క కీచుదనాన్ని ఏమంటారు?</p>
+          <div class="grid sm:grid-cols-2 gap-2 text-xs font-bold">
+            <div class="p-2.5 rounded-lg border bg-emerald-100 border-emerald-500 text-emerald-950 font-black">a) Pitch (శృతి / పిచ్) &#10004;</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">b) Vibration (కంపనం)</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">c) Intensity (తీవ్రత)</div>
+            <div class="p-2.5 rounded-lg border bg-slate-50">d) Decibel (డెసిబెల్)</div>
+          </div>
+          <p class="text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+            <strong>Scientific Reason:</strong> Pitch represents the brain's perception of sound frequency; high pitch corresponds to high frequency and pronounced shrillness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: SUGGESTED EXPERIMENTS (Page 82) ==================== -->
+    <section id="suggestedExperiments" class="space-y-6">
+      <div class="border-b-2 border-slate-200 pb-3">
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 flex items-center gap-3">
+          <i class="fa-solid fa-flask-vial text-sky-600"></i>
+          Suggested Experiments (Page 82 Complete Lab Writeups)
+        </h3>
+        <p class="text-sm text-slate-500 font-semibold mt-1">Full scientific reports: Aim, Apparatus, Procedure, Observation Table, and Conclusions in both languages.</p>
+      </div>
+
+      <!-- Experiment 1 -->
+      <article class="bg-white p-6 sm:p-8 rounded-3xl border-2 border-slate-200 shadow-sm space-y-4">
+        <span class="text-xs font-black bg-sky-100 text-sky-900 px-3.5 py-1 rounded-full uppercase">
+          Suggested Experiment 1: Intensity vs. Amplitude
+        </span>
+        <h4 class="text-lg font-black text-slate-900">
+          Aim: To know the relationship between the intensity of sound produced by a body and its amplitude.
+        </h4>
+        <p class="text-sm font-bold text-indigo-700 telugu-font">ఉద్దేశం: వస్తువు ఉత్పత్తి చేసే ధ్వని తీవ్రతకు మరియు దాని కంపన పరిమితికి మధ్య సంబంధాన్ని తెలుసుకొనుట.</p>
+
+        <div class="grid md:grid-cols-2 gap-5 text-sm leading-relaxed">
+          <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2">
+            <p><strong>Apparatus:</strong> Flat wooden table, 30 cm steel scale / hacksaw blade, heavy brick.</p>
+            <p><strong>Procedure:</strong>
+              1. Place 10 cm of the scale on the table and clamp it firmly under the brick, keeping 20 cm in air.<br>
+              2. Pluck the free end gently with small force. Observe the vibration amplitude and listen to sound.<br>
+              3. Pluck the blade again with greater force and record observations.
+            </p>
+            <div class="overflow-x-auto text-xs mt-2">
+              <table class="w-full border border-slate-300">
+                <tr class="bg-slate-200 font-bold"><th class="p-1.5 border">Force</th><th class="p-1.5 border">Amplitude</th><th class="p-1.5 border">Intensity</th></tr>
+                <tr><td class="p-1.5 border">Small Force</td><td class="p-1.5 border">Small (A to B small)</td><td class="p-1.5 border">Feeble Sound</td></tr>
+                <tr><td class="p-1.5 border">Large Force</td><td class="p-1.5 border">Large (A to B large)</td><td class="p-1.5 border">Loud Sound</td></tr>
+              </table>
+            </div>
+            <p><strong>Conclusion:</strong> Sound intensity is directly proportional to the square of its amplitude ($I \propto A^2$).</p>
+          </div>
+          <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950 space-y-2">
+            <p><strong>పరికరాలు:</strong> చెక్క బల్ల, 30 సెం.మీ స్టీలు స్కేలు లేదా హ్యాక్-సా బ్లేడు, బరువైన ఇటుక.</p>
+            <p><strong>విధానం:</strong> స్కేలు 10 సెం.మీ బల్లపై ఉంచి ఇటుకతో గట్టిగా నొక్కిపెట్టి, మిగిలిన 20 సెం.మీ గాలిలో ఉండేలా చూడాలి. మొదట తక్కువ బలంతో మీటి కంపనాలు, ధ్వనిని గమనించాలి. తర్వాత ఎక్కువ బలంతో మీటి పరిశీలించాలి.</p>
+            <div class="overflow-x-auto text-xs mt-2">
+              <table class="w-full border border-indigo-200">
+                <tr class="bg-indigo-100 font-bold"><th class="p-1.5 border">ప్రయోగించిన బలం</th><th class="p-1.5 border">కంపన పరిమితి</th><th class="p-1.5 border">ధ్వని తీవ్రత</th></tr>
+                <tr><td class="p-1.5 border">అల్ప బలం</td><td class="p-1.5 border">తక్కువ పరిమితి</td><td class="p-1.5 border">సన్నని / క్షీణ ధ్వని</td></tr>
+                <tr><td class="p-1.5 border">అధిక బలం</td><td class="p-1.5 border">ఎక్కువ పరిమితి</td><td class="p-1.5 border">పెద్ద / తీవ్రమైన ధ్వని</td></tr>
+              </table>
+            </div>
+            <p><strong>ముగింపు:</strong> ధ్వని తీవ్రత కంపన పరిమితిపై ప్రత్యక్షంగా ఆధారపడుతుంది.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Experiment 2 -->
+      <article class="bg-white p-6 sm:p-8 rounded-3xl border-2 border-slate-200 shadow-sm space-y-4">
+        <span class="text-xs font-black bg-sky-100 text-sky-900 px-3.5 py-1 rounded-full uppercase">
+          Suggested Experiment 2: Pitch &amp; Shrillness vs. Frequency
+        </span>
+        <h4 class="text-lg font-black text-slate-900">
+          Aim: To identify Pitch or Shrillness of different sounds using varying blade lengths.
+        </h4>
+        <p class="text-sm font-bold text-indigo-700 telugu-font">ఉద్దేశం: వివిధ ధ్వనుల శృతి లేదా కీచుదనాన్ని గుర్తించుట.</p>
+
+        <div class="grid md:grid-cols-2 gap-5 text-sm leading-relaxed">
+          <div class="lang-en bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2">
+            <p><strong>Apparatus:</strong> Two hacksaw blades, wooden table, bricks.</p>
+            <p><strong>Procedure:</strong>
+              1. Blade 1 clamped with 20 cm in air.<br>
+              2. Blade 2 clamped with only 5 cm in air.<br>
+              3. Vibrate both blades with identical force and compare their vibrations/sec and resulting pitch.
+            </p>
+            <div class="overflow-x-auto text-xs mt-2">
+              <table class="w-full border border-slate-300">
+                <tr class="bg-slate-200 font-bold"><th class="p-1.5 border">Blade in Air</th><th class="p-1.5 border">Vibrations/sec</th><th class="p-1.5 border">Pitch Quality</th></tr>
+                <tr><td class="p-1.5 border">Blade 1: 20 cm</td><td class="p-1.5 border">Fewer (Low Frequency)</td><td class="p-1.5 border">Low Pitch (Grave / Flat)</td></tr>
+                <tr><td class="p-1.5 border">Blade 2: 5 cm</td><td class="p-1.5 border">More (High Frequency)</td><td class="p-1.5 border">High Pitch (Shrill / Sharp)</td></tr>
+              </table>
+            </div>
+            <p><strong>Conclusion:</strong> Pitch depends strictly on frequency. Shorter vibrating bodies yield higher frequencies and sharper shrillness.</p>
+          </div>
+          <div class="lang-te bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 telugu-font text-indigo-950 space-y-2">
+            <p><strong>పరికరాలు:</strong> రెండు హ్యాక్-సా బ్లేడులు, బల్ల, ఇటుకలు.</p>
+            <p><strong>విధానం:</strong> మొదటి బ్లేడు 20 సెం.మీ గాలిలో ఉండేలా, రెండో బ్లేడు కేవలం 5 సెం.మీ మాత్రమే గాలిలో ఉండేలా బల్లపై ఇటుకలతో బిగించాలి. రెండింటినీ సమాన బలంతో మీటి పరిశీలించాలి.</p>
+            <div class="overflow-x-auto text-xs mt-2">
+              <table class="w-full border border-indigo-200">
+                <tr class="bg-indigo-100 font-bold"><th class="p-1.5 border">బ్లేడు పొడవు</th><th class="p-1.5 border">కంపనాల సంఖ్య (పౌనఃపున్యం)</th><th class="p-1.5 border">ధ్వని శృతి / పిచ్</th></tr>
+                <tr><td class="p-1.5 border">బ్లేడ్ 1: 20 సెం.మీ</td><td class="p-1.5 border">తక్కువ కంపనాలు (అల్ప పౌనఃపున్యం)</td><td class="p-1.5 border">తక్కువ పిచ్ (బొంగురు ధ్వని)</td></tr>
+                <tr><td class="p-1.5 border">బ్లేడ్ 2: 5 సెం.మీ</td><td class="p-1.5 border">ఎక్కువ కంపనాలు (అధిక పౌనఃపున్యం)</td><td class="p-1.5 border">ఎక్కువ పిచ్ (కీచు ధ్వని)</td></tr>
+              </table>
+            </div>
+            <p><strong>ముగింపు:</strong> ధ్వని శృతి (పిచ్) దాని పౌనఃపున్యంపై ఆధారపడును.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SECTION 6: SUGGESTED PROJECT WORKS (Page 82) ==================== -->
+    <section id="projectWorks" class="space-y-6">
+      <div class="border-b-2 border-slate-200 pb-3">
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 flex items-center gap-3">
+          <i class="fa-solid fa-diagram-project text-teal-600"></i>
+          Suggested Project Works (Page 82 Class Projects)
+        </h3>
+        <p class="text-sm text-slate-500 font-semibold mt-1">Student project guides for field observations, scrapbooks, and community exhibitions.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Project 1 -->
+        <div class="bg-white p-5 rounded-3xl border-2 border-slate-200 shadow-sm space-y-2.5">
+          <span class="text-xs font-black bg-teal-100 text-teal-900 px-3 py-1 rounded-full uppercase">Project 1</span>
+          <h4 class="font-extrabold text-sm text-slate-900">Sound Pollution Survey &amp; Photographic Report</h4>
+          <p class="text-xs text-indigo-700 font-bold telugu-font">ప్రాజెక్ట్ 1: శబ్ద కాలుష్య పరిస్థితుల ఛాయాచిత్రాల నివేదిక</p>
+          <div class="text-xs text-slate-600 space-y-1.5 bg-slate-50 p-3 rounded-xl border border-slate-200 leading-relaxed">
+            <p><strong>Plan:</strong> Photograph local traffic jams, stone crushing sites, wedding DJs, and generator hubs. Analyze decibel levels and write measures adopted by municipality.</p>
+            <p class="telugu-font text-indigo-950"><strong>తెలుగు మార్గదర్శి:</strong> పరిసర ప్రాంతాల్లోని ట్రాఫిక్ రొద, గ్రైండర్లు, డీజే మైకుల ఫొటోలు సేకరించి కాలుష్య నివారణ నివేదిక తయారుచేయండి.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white p-5 rounded-3xl border-2 border-slate-200 shadow-sm space-y-2.5">
+          <span class="text-xs font-black bg-teal-100 text-teal-900 px-3 py-1 rounded-full uppercase">Project 2</span>
+          <h4 class="font-extrabold text-sm text-slate-900">Musical Instruments Scrapbook &amp; Acoustic Classification</h4>
+          <p class="text-xs text-indigo-700 font-bold telugu-font">ప్రాజెక్ట్ 2: సంగీత వాయిద్యాల స్క్రాప్ బుక్ రూపకల్పన</p>
+          <div class="text-xs text-slate-600 space-y-1.5 bg-slate-50 p-3 rounded-xl border border-slate-200 leading-relaxed">
+            <p><strong>Plan:</strong> Collect photos of Stringed (Tata Vadya), Wind (Sushira Vadya), and Percussion (Avanaddha Vadya) instruments; tabulate their vibrating source parts.</p>
+            <p class="telugu-font text-indigo-950"><strong>తెలుగు మార్గదర్శి:</strong> వీణ, తబలా, పిల్లనగ్రోవి, డోలు వంటి వాయిద్యాల చిత్రాలు సేకరించి వాటి కంపించే భాగాలను పట్టికలో నమోదు చేయండి.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white p-5 rounded-3xl border-2 border-slate-200 shadow-sm space-y-2.5">
+          <span class="text-xs font-black bg-teal-100 text-teal-900 px-3 py-1 rounded-full uppercase">Project 3</span>
+          <h4 class="font-extrabold text-sm text-slate-900">Local Musicians Exhibition &amp; Telangana Heritage</h4>
+          <p class="text-xs text-indigo-700 font-bold telugu-font">ప్రాజెక్ట్ 3: స్థానిక సంగీత కళాకారుల ప్రదర్శన</p>
+          <div class="text-xs text-slate-600 space-y-1.5 bg-slate-50 p-3 rounded-xl border border-slate-200 leading-relaxed">
+            <p><strong>Plan:</strong> Interview local folk singers, Dappu artistes, and church/temple instrumentalists in Paladugu; display their bios and instruments in your school science corner.</p>
+            <p class="telugu-font text-indigo-950"><strong>తెలుగు మార్గదర్శి:</strong> మన పాలడుగు గ్రామంలోని దప్పు కళాకారులు, నాదస్వర విద్వాంసులను కలిసి వారి కళా ప్రావీణ్యాన్ని తరగతి గదిలో ప్రదర్శించండి.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 7: ACOUSTIC MARVEL - GOLCONDA FORT (Page 82) ==================== -->
+    <section id="golcondaFort" class="bg-gradient-to-br from-amber-50 via-white to-orange-50 rounded-3xl p-6 sm:p-10 border-2 border-amber-300 shadow-lg space-y-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl shadow-md">
+          <i class="fa-solid fa-archway"></i>
+        </div>
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-full">
+            Do You Know? SCERT Page 82 Final Feature
+          </span>
+          <h4 class="text-xl sm:text-2xl font-black text-slate-900">Acoustic Marvel of Golconda Fort - Hyderabad</h4>
+          <p class="text-xs sm:text-sm text-indigo-800 font-bold telugu-font">గోల్కొండ కోట ధ్వని అద్భుతం - హైదరాబాదు</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 text-sm leading-relaxed">
+        <div class="lang-en bg-white p-5 rounded-2xl border border-amber-200 shadow-xs space-y-2">
+          <strong class="text-amber-950 block font-black text-base">English Acoustic Architecture:</strong>
+          <p>Golconda Fort in Hyderabad is universally renowned as an architectural and engineering marvel of medieval India.</p>
+          <p><strong>The Phenomenon:</strong> If a person stands at a designated focal point directly under the Grand Portico entrance dome (Fateh Darwaza) and claps their hands, the acoustic reflections are funneled through specialized acoustic corridors. The clap sound reverberates across the granite structures and can be heard clearly at the Bala Hissar pavilion situated at the highest pinnacle of the fort—approximately <strong>1 kilometer away</strong>!</p>
+          <p><strong>Military Engineering Utility:</strong> This acoustic design served as an infallible defense warning alarm system, instantly alerting the royal guard atop the citadel against surprise enemy intrusions or royal arrivals.</p>
+        </div>
+        <div class="lang-te bg-white p-5 rounded-2xl border border-amber-200 shadow-xs telugu-font text-indigo-950 space-y-2">
+          <strong class="text-amber-950 block font-black text-base">తెలుగు సమగ్ర వివరణ:</strong>
+          <p>హైదరాబాద్‌లోని చారిత్రాత్మక గోల్కొండ కోట ప్రపంచ ప్రసిద్ధి చెందిన ఇంజనీరింగ్ మరియు వాస్తు అద్భుతం.</p>
+          <p><strong>ధ్వని విశేషం:</strong> కోట ప్రవేశ ద్వారమైన ఫతే దర్వాజా గుమ్మటం కింద ఒక నిర్దిష్ట కేంద్ర స్థానంలో నిలబడి చప్పట్లు కొడితే, ఆ ధ్వని బహుళ పరావర్తనం మరియు పునఃప్రతిధ్వని (Reverberation) చెందుతూ కొండపై దాదాపు <strong>1 కిలోమీటరు దూరంలో</strong> అత్యంత ఎత్తులో ఉన్న 'బాలాహిస్సార్' వద్ద స్పష్టంగా వినిపిస్తుంది.</p>
+          <p><strong>రక్షణ ప్రయోజనం:</strong> శత్రు సైన్యాలు ఆకస్మికంగా దాడి చేసినప్పుడు కోటపై ఉన్న సైనికులను అప్రమత్తం చేయడానికి ఆ కాలపు ఇంజనీర్లు ఈ శాస్త్రీయ ధ్వని సంకేత వ్యవస్థను అత్యద్భుతంగా నిర్మించారు.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FLOATING BACK TO TOP BUTTON ==================== -->
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Back to Top"
+    class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white shadow-2xl flex items-center justify-center transition-all duration-300 transform translate-y-20 opacity-0 hover:scale-110">
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-950 text-slate-400 py-10 border-t-2 border-slate-800 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <div class="flex items-center justify-center gap-2 text-amber-400 font-black text-base sm:text-lg">
+        <i class="fa-solid fa-school"></i>
+        <span>JACOB GAPP SCHOOL, PALADUGU, TELANGANA</span>
+      </div>
+      <p class="text-slate-200 font-bold">Class 8 Physical Sciences - Chapter 5: SOUND (ధ్వని) Portal</p>
+      <p class="text-slate-400">Educational Initiative curated by <strong>Bro. Balaswamy</strong> for high school students | Exhaustive English &amp; Telugu Learning Architecture</p>
+      <div class="flex flex-wrap items-center justify-center gap-4 text-slate-400 text-xs pt-2">
+        <span><i class="fa-solid fa-envelope text-amber-400 mr-1.5"></i>Official Report Target: balaswamysm@gmail.com</span>
+        <span>•</span>
+        <span><i class="fa-solid fa-location-dot text-amber-400 mr-1.5"></i>Paladugu, Telangana, India</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT SYSTEM ==================== -->
+  <script>
+    /* =====================================================================
+       1. STUDENT TRACKING & ACTIVE DURATION MONITOR (NON-BLOCKING)
+       ===================================================================== */
+    let currentStudent = {
+      name: "Bro. Balaswamy",
+      roll: "JGS-001",
+      school: "JACOB GAPP SCHOOL, PALADUGU, TELANGANA",
+      startTime: Date.now(),
+      sessionSeconds: 0
+    };
+
+    let timerInterval = null;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      // Ensure body scrolling is 100% active immediately
+      document.body.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = 'auto';
+
+      loadSavedStudentInfo();
+      startSessionTimer();
+      buildEightyPoints();
+      buildGlossary();
+      initScrollSpy();
+    });
+
+    function loadSavedStudentInfo() {
+      try {
+        const stored = localStorage.getItem('class8_sound_student');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed && parsed.name) {
+            currentStudent.name = parsed.name;
+            currentStudent.roll = parsed.roll || "JGS-001";
+            const nameEl = document.getElementById('headerStudentName');
+            const rollEl = document.getElementById('headerStudentRoll');
+            if (nameEl) nameEl.value = currentStudent.name;
+            if (rollEl) rollEl.value = currentStudent.roll;
+          }
+        }
+      } catch(e) {
+        console.warn("Storage not available, proceeding without interruption:", e);
+      }
+    }
+
+    function saveStudentInfo() {
+      const name = document.getElementById('headerStudentName').value.trim() || "Bro. Balaswamy";
+      const roll = document.getElementById('headerStudentRoll').value.trim() || "JGS-001";
+      currentStudent.name = name;
+      currentStudent.roll = roll;
+
+      try {
+        localStorage.setItem('class8_sound_student', JSON.stringify({
+          name: name,
+          roll: roll,
+          school: "JACOB GAPP SCHOOL, PALADUGU, TELANGANA"
+        }));
+      } catch(e) {}
+
+      alert("Student Details Saved!\nName: " + name + "\nRoll: " + roll + "\nSession Timer Active: " + formatDuration(currentStudent.sessionSeconds));
+    }
+
+    function startSessionTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        currentStudent.sessionSeconds++;
+        const timerElem = document.getElementById('liveSessionTimer');
+        if (timerElem) {
+          timerElem.innerText = formatDuration(currentStudent.sessionSeconds);
+        }
+      }, 1000);
+    }
+
+    function formatDuration(secs) {
+      const mins = Math.floor(secs / 60);
+      const remSecs = secs % 60;
+      return `${String(mins).padStart(2, '0')}:${String(remSecs).padStart(2, '0')}`;
+    }
+
+    function sendReportDirect() {
+      const name = document.getElementById('headerStudentName').value.trim() || currentStudent.name;
+      const roll = document.getElementById('headerStudentRoll').value.trim() || currentStudent.roll;
+      const mins = Math.floor(currentStudent.sessionSeconds / 60);
+      const secs = currentStudent.sessionSeconds % 60;
+
+      let body = `JACOB GAPP SCHOOL, PALADUGU, TELANGANA%0D%0A`;
+      body += `CLASS 8 PHYSICAL SCIENCES - CHAPTER 5: SOUND (ధ్వని)%0D%0A`;
+      body += `EDUCATIONAL PORTAL - ATTENDANCE & READING TIME REPORT%0D%0A`;
+      body += `===============================================================%0D%0A`;
+      body += `Student Name : ${name}%0D%0A`;
+      body += `Roll Number  : ${roll}%0D%0A`;
+      body += `School       : JACOB GAPP SCHOOL, PALADUGU, TELANGANA%0D%0A`;
+      body += `Active Read Time : ${mins} minutes ${secs} seconds (${currentStudent.sessionSeconds} total seconds)%0D%0A`;
+      body += `Timestamp    : ${new Date().toLocaleString('en-IN')}%0D%0A`;
+      body += `Mentor / Curator : Bro. Balaswamy%0D%0A`;
+      body += `===============================================================%0D%0A`;
+      body += `Status: Student completed session review of SCERT Chapter 5 (Pages 65-82).`;
+
+      const mailtoUrl = `mailto:balaswamysm@gmail.com?subject=${encodeURIComponent("Sound Chapter Study Attendance: " + name + " (Roll " + roll + ")")}&body=${body}`;
+      window.location.href = mailtoUrl;
+    }
+
+    /* =====================================================================
+       2. FONT RESIZE CONTROLS
+       ===================================================================== */
+    function changeFontSize(size) {
+      document.body.classList.remove('font-sm', 'font-md', 'font-lg', 'font-xl');
+      if (size === 'sm') document.body.classList.add('font-sm');
+      else if (size === 'md') document.body.classList.add('font-md');
+      else if (size === 'lg') document.body.classList.add('font-lg');
+      else if (size === 'xl') document.body.classList.add('font-xl');
+    }
+
+    /* =====================================================================
+       3. 80 MASTER CONCEPTS (TELUGU LONG DESCRIPTIONS & REAL-LIFE EXAMPLES)
+       ===================================================================== */
+    const masterConcepts = [
+      { t: "Sound is a form of energy", te: "ధ్వని ఒక శక్తి రూపం", d: "ధ్వని అనేది పదార్థ కణాల కంపనాల ద్వారా తరంగాల రూపంలో ఒక చోటు నుండి మరొక చోటుకు వ్యాపించే యాంత్రిక శక్తి.", ex: "ఉరుము ఉరిమినప్పుడు పెద్ద శబ్దానికి కిటికీ అద్దాలు దద్దరిల్లి కంపించడం." },
+      { t: "Vibrations produce sound", te: "కంపనాలు ధ్వనిని ఉత్పత్తి చేస్తాయి", d: "ఏదైనా ఒక వస్తువు తన నిశ్చల స్థితి నుండి అటూ ఇటూ వేగంగా కదలడాన్ని కంపనం అంటారు. ఈ కంపనమే ధ్వనిని పుట్టిస్తుంది.", ex: "సైకిల్ గంటను మోగించి చేత్తో పట్టుకుంటే కంపనం ఆగి శబ్దం వెంటనే ఆగిపోతుంది." },
+      { t: "Mean position (మధ్యస్థ స్థానం)", te: "నిశ్చల లేదా మధ్యస్థ స్థానం", d: "కంపించే వస్తువుపై ఎటువంటి బాహ్య బలం ప్రయోగించనప్పుడు అది విశ్రాంతిగా ఉండే స్థితిని మధ్యస్థ స్థానం అంటారు.", ex: "బల్ల అంచున నిశ్చలంగా ఉండే స్కేలు స్థానం OA." },
+      { t: "One complete vibration", te: "ఒక పూర్తి కంపనం", d: "మధ్యస్థ స్థానం నుండి గరిష్టంగా ఒకవైపునకు, మళ్ళీ వెనుకకు, తర్వాత రెండో వైపునకు వెళ్లి తిరిగి మధ్యస్థ స్థానానికి రావడాన్ని ఒక కంపనం అంటారు.", ex: "స్కేలు OA నుండి OC కి, తిరిగి OA కి, తర్వాత OB కి, మళ్ళీ OA కి రావడం." },
+      { t: "Amplitude (కంపన పరిమితి)", te: "కంపన పరిమితి", d: "కంపించే వస్తువు తన మధ్యస్థ స్థానం నుండి ఒక వైపునకు పొందే గరిష్ట స్థానభ్రంశాన్ని కంపన పరిమితి అంటారు.", ex: "డ్రమ్మును బలంగా బాదినప్పుడు చర్మం ఎక్కువ ఎత్తు లేచి పెద్ద శబ్దాన్ని ఇస్తుంది." },
+      { t: "Loudness depends on amplitude", te: "తీవ్రత కంపన పరిమితిపై ఆధారపడుతుంది", d: "కంపన పరిమితి పెరిగితే ధ్వని తీవ్రత (లౌడ్‌నెస్) పెరుగుతుంది; కంపన పరిమితి తగ్గితే ధ్వని క్షీణిస్తుంది.", ex: "బల్లను మెల్లగా తట్టినప్పుడు చిన్న శబ్దం, బలంగా కొట్టినప్పుడు పెద్ద శబ్దం రావడం." },
+      { t: "Frequency (పౌనఃపున్యం)", te: "పౌనఃపున్యం", d: "ఒక సెకను కాలంలో ఒక కంపించే వస్తువు చేసే కంపనాల సంఖ్యను పౌనఃపున్యం అంటారు. దీని ప్రమాణం హెర్ట్జ్ (Hz).", ex: "ఒక స్కేలు సెకనుకు 50 సార్లు కంపిస్తే దాని పౌనఃపున్యం 50 Hz." },
+      { t: "Pitch or Shrillness (శృతి లేదా కీచుదనం)", te: "ధ్వని శృతి / పిచ్", d: "ధ్వని ఎంత కీచుగా లేదా బొంగురుగా ఉందో తెలిపే లక్షణాన్ని శృతి (పిచ్) అంటారు. ఇది పౌనఃపున్యంపై ఆధారపడుతుంది.", ex: "ఆడవారి లేదా పిల్లల గొంతు కీచుగా (హై పిచ్), మగవారి గొంతు బొంగురుగా (లో పిచ్) ఉండటం." },
+      { t: "Decibel (డెసిబెల్ - dB)", te: "డెసిబెల్ ప్రమాణం", d: "ధ్వని తీవ్రత స్థాయిని కొలవడానికి ఉపయోగించే అంతర్జాతీయ ప్రమాణం డెసిబెల్ (dB).", ex: "మనం మామూలుగా మాట్లాడేటప్పుడు తీవ్రత దాదాపు 60 dB ఉంటుంది." },
+      { t: "Threshold of Hearing (0 dB)", te: "వినికిడి ప్రారంభ పరిమితి", d: "మానవ చెవి వినగల అతి చిన్న నిశ్శబ్ద సమాన శబ్దాన్ని 0 డెసిబెల్స్ గా గుర్తిస్తారు.", ex: "పూర్తి నిశ్శబ్ద గదిలో సూది కింద పడిన శబ్దం వినబడే స్థాయి." },
+      { t: "Whisper Intensity (15 dB)", te: "గుసగుసల తీవ్రత", d: "మనం ఇతరులకు మాత్రమే వినపడేలా చెవిలో మెల్లగా గుసగుసలాడే శబ్దం తీవ్రత సుమారు 15 dB.", ex: "లైబ్రరీలో పక్కవారితో రహస్యంగా మాట్లాడటం." },
+      { t: "Pain Threshold (>80 dB)", te: "బాధాకరమైన శబ్ద తీవ్రత", d: "80 డెసిబెల్స్ మించిన శబ్దం మానవ కర్ణభేరికి నొప్పిని కలిగిస్తుంది; నిరంతరం వింటే చెవుడు వస్తుంది.", ex: "ఫ్యాక్టరీల్లోని పెద్ద యంత్రాల రొద లేదా సైలెన్సర్ లేని బైకుల శబ్దం." },
+      { t: "Jet Engine Noise (120-130 dB)", te: "జెట్ విమాన శబ్దం", d: "జెట్ విమానం టేకాఫ్ అయ్యే సమయంలో వెలువడే శబ్దం దాదాపు 120 నుండి 130 dB ల తీవ్రత కలిగి ఉంటుంది.", ex: "విమానాశ్రయంలో రన్‌వే సమీపంలో ఉండే గ్రౌండ్ సిబ్బంది ఇయర్‌మఫ్స్ ధరిస్తారు." },
+      { t: "Gunshot or Firecracker (140 dB)", te: "తుపాకీ పేలుడు / బాణాసంచా", d: "దీపావళి పెద్ద టపాసులు మరియు తుపాకీ పేలుళ్లు దాదాపు 140 dB తీవ్రతతో తాత్కాలిక చెవుడును కలిగిస్తాయి.", ex: "లక్ష్మీ బాంబు సమీపంలో పేలినప్పుడు కొద్దిసేపు చెవులు గింగురుమనడం." },
+      { t: "Sound needs a material medium", te: "ధ్వని ప్రసారానికి యానకం అవసరం", d: "ధ్వని ప్రయాణించడానికి అణువులు గల పదార్థం (ఘన, ద్రవ లేదా వాయు యానకం) ఖచ్చితంగా కావాలి.", ex: "గాలి లేని సీసాలో అలారం మోగించినా బయటకు ఏమీ వినిపించదు." },
+      { t: "Sound cannot travel in vacuum", te: "శూన్యంలో ధ్వని ప్రయాణించలేదు", d: "శూన్యం (వాక్యూమ్) లో ఎటువంటి భౌతిక అణువులు ఉండవు కాబట్టి కంపనాలు ముందుకు సాగలేవు.", ex: "అంతరిక్షంలో వ్యోమగాములు పక్కపక్కనే ఉన్నా నేరుగా మాట్లాడుకోలేక రేడియో వాడతారు." },
+      { t: "Propagation in solids", te: "ఘన పదార్థాలలో ప్రసారం", d: "ఘన పదార్థాలలో అణువులు అత్యంత సన్నిహితంగా బంధించబడి ఉంటాయి, కాబట్టి ధ్వని ఘనాలలో చాలా వేగంగా ప్రసరిస్తుంది.", ex: "రైలు పట్టాలపై చెవి ఆనిస్తే మైలు దూరంలో ఉన్న రైలు రాక ముందుగానే తెలుస్తుంది." },
+      { t: "Propagation in liquids", te: "ద్రవాలలో ధ్వని ప్రసారం", d: "ద్రవ పదార్థాల ద్వారా కూడా ధ్వని సులభంగా ప్రసరిస్తుంది. నీటి అణువులు కంపనాలను ముందుకు పంపుతాయి.", ex: "తిమింగలాలు, డాల్ఫిన్లు సముద్రంలో వందల కిలోమీటర్ల దూరం నుండి ధ్వని ద్వారా మాట్లాడుకుంటాయి." },
+      { t: "Propagation in gases (air)", te: "వాయువులలో ధ్వని ప్రసారం", d: "మన నిత్యజీవితంలో ధ్వని ప్రసారానికి గాలి అత్యంత సాధారణమైన మాధ్యమం.", ex: "తరగతి గదిలో ఉపాధ్యాయుడు చెప్పే పాఠం విద్యార్థులందరికీ గాలి ద్వారానే చేరుతుంది." },
+      { t: "Speed of sound hierarchy", te: "ధ్వని వేగాల తారతమ్యం", d: "ధ్వని వేగం: ఘన పదార్థాలు > ద్రవ పదార్థాలు > వాయువులు. గాలిలో ధ్వని వేగం సుమారు 330-340 m/s.", ex: "నీటిలో ధ్వని వేగం గాలికంటే దాదాపు 4 రెట్లు, ఇనుములో దాదాపు 15 రెట్లు ఎక్కువ." },
+      { t: "Human Larynx (స్వరపేటిక)", te: "మానవ స్వరపేటిక లేదా వాయిస్ బాక్స్", d: "శ్వాసనాళం పైభాగంలో ఉండి మానవులలో మాటలు, శబ్దాలను ఉత్పత్తి చేసే ప్రధాన అవయవం.", ex: "మనం మాట్లాడుతున్నప్పుడు గొంతుపై వేలు ఉంచితే స్వరపేటిక కంపించడం తెలుస్తుంది." },
+      { t: "Vocal Cords (స్వరతంత్రులు)", te: "స్వరతంత్రులు", d: "స్వరపేటికలో ఉండే రెండు కండరాల బంధనాలు (లిగమెంట్స్). ఇవి కంపించి గొంతు శబ్దాన్ని పుట్టిస్తాయి.", ex: "రెండు రబ్బరు బ్యాండ్ల మధ్య గాలి ఊదినప్పుడు శబ్దం వచ్చినట్లే ఇవి పనిచేస్తాయి." },
+      { t: "Male vocal cord length (20mm)", te: "పురుషుల స్వరతంత్రుల పొడవు", d: "వయోజన పురుషులలో స్వరతంత్రుల పొడవు దాదాపు 20 మిల్లీమీటర్లు ఉంటుంది. దీనివల్ల వారి గొంతు గంభీరంగా ఉంటుంది.", ex: "పురుషుల స్వరం తక్కువ పౌనఃపున్యంతో బొంగురుగా (బేస్ వాయిస్) రావడానికి ఇదే కారణం." },
+      { t: "Female vocal cord length (15mm)", te: "స్త్రీల స్వరతంత్రుల పొడవు", d: "మహిళల్లో స్వరతంత్రులు పురుషుల కంటే 5 మి.మీ చిన్నగా (15 మి.మీ) ఉంటాయి.", ex: "తక్కువ పొడవు వలన తంత్రులు వేగంగా కంపిస్తూ ఆడవారి గొంతుకు ఎక్కువ పిచ్ లేదా కీచుదనాన్నిస్తాయి." },
+      { t: "Children vocal cords", te: "పిల్లల స్వరతంత్రులు", d: "పిల్లలలో స్వరతంత్రులు మరింత చిన్నగా, సన్నగా ఉండి అత్యంత వేగంగా కంపించగలవు.", ex: "చిన్న పిల్లల ఏడుపు లేదా కేకలు అత్యంత కీచుగా ఉండటానికి చిన్న స్వరతంత్రులే కారణం." },
+      { t: "Trachea (గాలి నాళం)", te: "శ్వాసనాళం", d: "ఊపిరితిత్తుల నుండి గాలిని స్వరపేటిక వైపునకు చేరవేసే శ్వాస మార్గం.", ex: "ఊపిరితిత్తుల నుండి వచ్చే గాలి పీడనమే స్వరతంత్రులను కంపింపజేస్తుంది." },
+      { t: "Epiglottis (ఉపజిహ్విక)", te: "ఉపజిహ్విక కవాటం", d: "ఆహారం తినేటప్పుడు ఆహారపు ముద్ద శ్వాసనాళంలోకి వెళ్లకుండా మూసివేసే రక్షక కవాటం.", ex: "మనం ఆహారం మింగే సమయంలో శ్వాసనాళం మూతపడటం." },
+      { t: "Outer Ear - Pinna (చెవి దొప్ప)", te: "బాహ్య చెవి - పిన్నా", d: "తల ఇరువైపులా కనిపించే వెలుపలి మృదులాస్థి భాగం. ఇది చుట్టుపక్కల ధ్వని తరంగాలను గరాటులా సేకరిస్తుంది.", ex: "దూరంగా ఉన్న శబ్దం సరిగ్గా వినపడటానికి చేతిని చెవి వెనుక దోసిలిలా పెట్టుకోవడం." },
+      { t: "Auditory Canal (శ్రవణ కుహరం)", te: "శ్రవణ నాళం", d: "పిన్నా సేకరించిన ధ్వని తరంగాలను లోపలి కర్ణభేరి వైపునకు చేరవేసే సన్నని గొట్టం వంటి మార్గం.", ex: "ధ్వని తరంగాలు బయటి నుండి కర్ణభేరికి ఈ మార్గం ద్వారానే చేరుతాయి." },
+      { t: "Tympanum / Eardrum (కర్ణభేరి)", te: "కర్ణభేరి పొర", d: "శ్రవణ నాళం చివర బిగుతుగా ఉండే సున్నితమైన చర్మపు పొర. ధ్వని తరంగాలు తాకగానే ఇది కంపిస్తుంది.", ex: "డ్రమ్ముపై చర్మం అదిరినట్లే కర్ణభేరి కంపించి మధ్య చెవికి శబ్దాన్ని అందిస్తుంది." },
+      { t: "Middle Ear Ossicles", te: "కర్ణాంతరాస్థులు (మూడు ఎముకలు)", d: "శరీరంలోనే అతి చిన్నవైన మూడు ఎముకల గొలుసు: కూటకము (సుత్తి), దాగి (అన్విల్), కర్ణవలయము/స్తాపెస్ (రికాబు).", ex: "ఇవి కంపనాల బలహీనతను తొలగించి వాటిని యాంత్రికంగా పెద్దవి చేస్తాయి." },
+      { t: "Malleus (Hammer)", te: "కూటకము (సుత్తి ఆకార ఎముక)", d: "కర్ణభేరికి నేరుగా అతుక్కుని ఉండే మొదటి చిన్న ఎముక. కర్ణభేరి కంపించగానే ఇది స్పందిస్తుంది.", ex: "కర్ణభేరి కంపనాలను స్వీకరించి రెండో ఎముక అయిన దాగికి అందిస్తుంది." },
+      { t: "Incus (Anvil)", te: "దాగి (అన్విల్ ఆకారపు ఎముక)", d: "సుత్తి ఆకారపు ఎముకకు మరియు రికాబు ఎముకకు మధ్య వారధిలా ఉండే రెండో ఎముక.", ex: "కంపనాల శక్తిని మూడో ఎముకకు బదిలీ చేస్తుంది." },
+      { t: "Stapes (Stirrup)", te: "కర్ణవలయము లేదా స్తాపెస్", d: "మానవ శరీరంలోకెల్లా అత్యంత చిన్న ఎముక. ఇది అండాకార కిటికీకి కంపనాలను చేరవేస్తుంది.", ex: "దీని పరిమాణం కేవలం 3 మిల్లీమీటర్లు మాత్రమే ఉంటుంది." },
+      { t: "Oval Window Magnification", te: "అండాకార కిటికీ పీడన వర్ధనం", d: "కర్ణభేరి వైశాల్యంలో 1/20 వంతు మాత్రమే ఉన్న అండాకార కిటికీ కంపనాలను 30 నుండి 60 రెట్లు పెంచుతుంది.", ex: "హైహీల్స్ చెప్పులు వేసినప్పుడు నేలపై పీడనం విపరీతంగా పెరిగినట్లు ఇక్కడ శక్తి పెరుగుతుంది." },
+      { t: "Cochlea (కర్ణావర్తం)", te: "కోక్లియా లేదా కర్ణావర్తం", d: "లోపలి చెవిలోని నత్తగుల్ల ఆకారపు భాగం. ఇది చిక్కని ద్రవంతో నిండి ఉండి ప్రకంపనాలను గ్రహిస్తుంది.", ex: "ద్రవంలోని తరంగాలు లోపలి సూక్ష్మ రోమాలను కదిలిస్తాయి." },
+      { t: "Auditory Nerve (శ్రవణ నాడి)", te: "శ్రవణ నాడి", d: "కోక్లియాలోని రోమ కణాలు పుట్టించిన విద్యుత్ సంకేతాలను మెదడుకు మోసుకెళ్ళే నాడి.", ex: "మెదడు ఈ విద్యుత్ ప్రేరణలను విశ్లేషించి ఫలానా ధ్వని అని గ్రహిస్తుంది." },
+      { t: "Bone Conduction", te: "ఎముకల ద్వారా ధ్వని గ్రహణం", d: "ధ్వని తరంగాలు కేవలం చెవి రంధ్రం ద్వారానే కాక పుర్రె ఎముకల కంపనాల ద్వారా కూడా లోపలి చెవిని చేరగలవు.", ex: "తలమీద మెల్లగా తట్టుకున్నప్పుడు పుర్రె ద్వారా శబ్దం నేరుగా లోపలికి వినిపించడం." },
+      { t: "Audible Range (20 Hz - 20,000 Hz)", te: "మానవ శ్రవ్య అవధి", d: "మానవుడు వినగల ధ్వని పౌనఃపున్యాల పరిధి సెకనుకు 20 కంపనాల నుండి 20,000 కంపనాల వరకు ఉంటుంది.", ex: "ఆరోగ్యవంతమైన మానవుడు ఈ పరిధిలోని శబ్దాలను మాత్రమే వినగలడు." },
+      { t: "Infrasonic Sounds (<20 Hz)", te: "అవశ్రవ్యాలు", d: "20 Hz కంటే తక్కువ పౌనఃపున్యం గల ధ్వనులను అవశ్రవ్యాలు అంటారు. మానవ చెవి వీటిని వినలేదు.", ex: "భూకంప తరంగాలు, ఏనుగులు మరియు తిమింగలాలు ఉత్పత్తి చేసే తక్కువ పౌనఃపున్య శబ్దాలు." },
+      { t: "Ultrasonic Sounds (>20,000 Hz)", te: "అతిధ్వనులు", d: "20,000 Hz కంటే ఎక్కువ పౌనఃపున్యం గల ధ్వనులను అతిధ్వనులు అంటారు.", ex: "గబ్బిలాలు చీకటిలో ఆహారాన్ని పట్టుకోవడానికి మరియు డాక్టర్లు స్కానింగ్ కోసం వాడతారు." },
+      { t: "Bat Echolocation", te: "గబ్బిలాల అతిధ్వని ప్రసారం", d: "గబ్బిలాలు కళ్ళు సరిగ్గా కనిపించకపోయినా అతిధ్వనులను వెలువరించి, అవి అడ్డంకులను తాకి తిరిగి వచ్చే ప్రతిధ్వనిని బట్టి ఎగురుతాయి.", ex: "చీకటి గుహల్లో గబ్బిలాలు దేనికీ ఢీకొనకుండా వేటాడటం." },
+      { t: "Music (సంగీతం)", te: "సంగీతం", d: "నియమిత కాలవ్యవధుల్లో, క్రమమైన కంపనాల కలయిక వల్ల పుట్టి వినడానికి ఇంపుగా ఉండే ధ్వని.", ex: "గాత్ర కచేరీ, వేణువు నాదం లేదా పియానో స్వరాలు." },
+      { t: "Noise (శబ్దం / రొద)", te: "శబ్దం లేదా రొద", d: "అస్తవ్యస్తమైన, అపశ్రుతితో కూడిన మరియు వినడానికి కర్ణకఠోరంగా ఉండే ధ్వనుల మిశ్రమం.", ex: "రైల్వే స్టేషన్ రొద, వెల్డింగ్ మిషన్ల శబ్దం." },
+      { t: "Mixed Frequencies in Speech", te: "మాట్లాడే మాటల్లో మిశ్రమ పౌనఃపున్యాలు", d: "మనం పలికే ప్రతి మాట ఒకే పౌనఃపున్యంతో ఉండదు; అనేక అక్షరాల విభిన్న పౌనఃపున్యాల సమాహారమే ఒక పదం.", ex: "'నో' (NO) అనే పదాన్ని కోపంలో ఒకలా, ఆశ్చర్యంలో మరొక పిచ్ తో పలుకుతాం." },
+      { t: "Organs of Speech", te: "వాక్కును ఉత్పత్తి చేసే అవయవాలు", d: "మానవ సంభాషణలో స్వరతంత్రులు, పెదవులు, దంతాలు, నాలుక, ముక్కు మరియు గొంతు భాగస్వామ్యం వహిస్తాయి.", ex: "నాలుక లేదా పెదవులు కదల్చకుండా అన్ని అక్షరాలను స్పష్టంగా పలకలేము." },
+      { t: "Ventriloquism (వెంక్రిలాక్విజం)", te: "పెదవులు కదపకుండా మాట్లాడే కళ", d: "పెదవులను దాదాపు నిశ్చలంగా ఉంచి, గొంతు మరియు డయాఫ్రమ్ కండరాల నియంత్రణతో మాట్లాడే అద్భుత ప్రదర్శన కళ.", ex: "చేతిలోని తోలుబొమ్మ మాట్లాడుతున్నట్లు భ్రమింపజేసే ప్రదర్శన." },
+      { t: "Chinchapattana Gomatham Srinivas", te: "చించపట్టణ గోమఠం శ్రీనివాస్", d: "వరంగల్ కు చెందిన ప్రపంచ ప్రసిద్ధ వెంక్రిలాక్విస్ట్. 1990 లో 32 గంటల పాటు నిర్విరామంగా ప్రదర్శన ఇచ్చి ప్రపంచ రికార్డు నెలకొల్పారు.", ex: "ప్రపంచవ్యాప్తంగా 6,000 కు పైగా ప్రదర్శనలు ఇచ్చి తెలంగాణకు గర్వకారణంగా నిలిచారు." },
+      { t: "Padma Shree Dr. Nerella Venu Madhav", te: "పద్మశ్రీ డా. నేరెళ్ళ వేణుమాధవ్", d: "వరంగల్ కు చెందిన భారతదేశపు అగ్రశ్రేణి మిమిక్రీ కళాకారుడు. భారత ప్రభుత్వం 2001లో ఈయనను పద్మశ్రీతో సత్కరించింది.", ex: "తన స్వరంతో పక్షులు, జంతువులు, ప్రముఖుల గొంతులను హూబహూ అనుకరించి మెప్పించారు." },
+      { t: "Jalatarang (జలతరంగిణి)", te: "జలతరంగిణి వాయిద్యం", d: "నీటి మట్టాలు వేర్వేరుగా ఉన్న పింగాణీ లేదా లోహపు గిన్నెలపై పుల్లతో కొడుతూ స్వరాలు పలికించే ప్రాచీన భారతీయ వాయిద్యం.", ex: "నీటి పరిమాణం మారినప్పుడు గాలి స్తంభం పొడవు మారి విభిన్న స్వరాలు పుడతాయి." },
+      { t: "Tabla Sound Mechanism", te: "తబలా ధ్వని సూత్రం", d: "తబలాలో పై చర్మపు పొరతో పాటు లోపలి బోలు భాగంలోని గాలి కూడా కంపిస్తూ సమగ్రమైన నాదాన్ని ఇస్తాయి.", ex: "చేతితో చర్మంపై కొట్టినప్పుడు లోపలి గాలి కంపించి నాదం పెరుగుతుంది." },
+      { t: "Flute / Clarinet Wind Resonance", te: "పిల్లనగ్రోవి ధ్వని విధానం", d: "రంధ్రాల గుండా గాలిని ఊదినప్పుడు ఏర్పడే వాయు స్తంభాల కంపనాల వల్ల వేణువులో శ్రావ్యమైన రాగాలు పుడతాయి.", ex: "వేళ్ళతో రంధ్రాలను మూస్తూ తెరుస్తూ ఉంటే గాలి స్తంభం పొడవు మారి స్వరాలు మారతాయి." },
+      { t: "Water Tap Sound", te: "నీటి కుళాయి నుండి వచ్చే శబ్దం", d: "కుళాయి తిప్పిన వెంటనే నీరు రాకముందు గొట్టంలోని సన్నని రంధ్రం నుండి గాలి పీడనంతో బయటకు వచ్చి ఈల వంటి శబ్దం చేస్తుంది.", ex: "పైపులోని గాలి రంధ్రం గుండా బయటకు రావడం వేణువు సూత్రం లాంటిదే." },
+      { t: "Ustad Bismillah Khan (బిస్మిల్లా ఖాన్)", te: "ఉస్తాద్ బిస్మిల్లా ఖాన్", d: "భారతరత్న పురస్కార గ్రహీత మరియు ప్రపంచ ప్రసిద్ధ షెహనాయ్ విద్వాంసుడు. వారణాసి గంగా తీరంలో షెహనాయ్‌కి ప్రాణం పోశారు.", ex: "కాశీ విశ్వనాథ ఆలయంలో షెహనాయ్ వాయించి భారతీయ శాస్త్రీయ సంగీతాన్ని విశ్వవ్యాప్తం చేశారు." },
+      { t: "Veena Chitti Babu (చిట్టిబాబు)", te: "వీణా చిట్టిబాబు", d: "దక్షిణ భారత కర్ణాటక సంగీత రంగంలో వీణను అద్భుతంగా వాయించిన లెజెండరీ విద్వాంసుడు.", ex: "వీణ అనగానే గుర్తుకువచ్చేలా తన వేళ్ళతో అద్భుత సంగీత తరంగాలను సృష్టించారు." },
+      { t: "Smt. M.S. Subbulakshmi", te: "ఎం.ఎస్. సుబ్బులక్ష్మి", d: "కర్ణాటక సంగీత సామ్రాజ్ఞి మరియు భారతరత్న గ్రహీత. భక్తి గీతాలు, వెంకటేశ్వర సుప్రభాతం ద్వారా చిరస్మరణీయురాలయ్యారు.", ex: "ఆమె మధురమైన స్వరం తరాలపాటు ఆధ్యాత్మిక ఆనందాన్ని పంచుతోంది." },
+      { t: "Sri Ghantasala Venkateswara Rao", te: "ఘంటసాల వెంకటేశ్వర రావు", d: "ప్రఖ్యాత తెలుగు గాయకుడు మరియు సంగీత దర్శకుడు. 10,000కు పైగా పాటలు పాడి, భగవద్గీతను గానం చేసి అమరులయ్యారు.", ex: "తెలుగు సినీ సంగీత స్వర్ణయుగంలో ఆయన గొంతు ఒక మైలురాయి." },
+      { t: "Golconda Fort Acoustic Marvel", te: "గోల్కొండ కోట ధ్వని అద్భుతం", d: "హైదరాబాద్ లోని గోల్కొండ కోటలో ప్రధాన ప్రవేశ ద్వారం వద్ద చప్పట్లు కొడితే 1 కి.మీ దూరంలోని బాలాహిస్సార్ వద్ద స్పష్టంగా వినిపిస్తుంది.", ex: "శత్రువుల రాకను సైనికులకు చేరవేయడానికి ఆ కాలంలో రూపొందించిన శబ్ద ప్రతిధ్వని ఇంజనీరింగ్ అద్భుతం." },
+      { t: "Sound Pollution (శబ్ద కాలుష్యం)", te: "శబ్ద కాలుష్యం", d: "పర్యావరణంలో అధికమైన, అవాంఛిత మరియు హానికరమైన శబ్దాలు చేరి మానవులకు, జీవులకు హాని కలిగించడాన్ని శబ్ద కాలుష్యం అంటారు.", ex: "ట్రాఫిక్ హారన్లు, డీజే స్పీకర్లు, ఫ్యాక్టరీల రొద." },
+      { t: "Health Effects of Noise Pollution", te: "శబ్ద కాలుష్య ఆరోగ్య నష్టాలు", d: "శాశ్వత వినికిడి లోపం, నిద్రలేమి (స్లీప్‌లెస్‌నెస్), మానసిక ఒత్తిడి, రక్తపోటు (బీపీ) పెరగడం మరియు గుండె సమస్యలు.", ex: "రద్దీగా ఉండే హైవేల పక్కన నివసించే వారిలో అధిక రక్తపోటు పెరగడం." },
+      { t: "Effects on Biodiversity", te: "జీవవైవిధ్యంపై దుష్ప్రభావం", d: "పక్షులు, జంతువులు తమ సంకేతాలను గ్రహించలేక పోతాయి; వలస మార్గాలు తప్పుతాయి, వాటి పునరుత్పత్తి దెబ్బతింటుంది.", ex: "నగరాల్లో అధిక శబ్దాల వల్ల పిచ్చుకలు, పక్షులు పల్లెటూళ్ళకు తరలిపోవడం." },
+      { t: "Acoustic Silencers (సైలెన్సర్లు)", te: "యంత్రాలకు సైలెన్సర్ల అమరిక", d: "వాహనాలు మరియు యంత్రాల నుండి వచ్చే ఉధృత ధ్వని తరంగాలను తగ్గించే సాధనాలు.", ex: "మోటార్ సైకిల్ ఎగ్జాస్ట్ పైపుకు సైలెన్సర్ బిగించి శబ్దాన్ని తగ్గించడం." },
+      { t: "Acoustic Buffering through Trees", te: "మొక్కలు నాటడం ద్వారా శబ్ద నియంత్రణ", d: "రహదారుల పక్కన దట్టంగా చెట్లను నాటడం వల్ల ఆకులు, కొమ్మలు శబ్ద తరంగాలను శోషించుకుని శబ్ద తీవ్రతను తగ్గిస్తాయి.", ex: "గ్రీన్ బెల్ట్ ప్రాజెక్ట్ ద్వారా హైవేల వెంబడి చెట్లను పెంచడం." },
+      { t: "Reducing Domestic Noise", te: "గృహ శబ్దాలను తగ్గించుట", d: "మిక్సర్లు, వాషింగ్ మెషీన్లు, మోటార్లు వాడేటప్పుడు తలుపులు మూయడం మరియు టీవీ శబ్దం తక్కువగా ఉంచడం.", ex: "ఇంట్లో పిల్లలు చదువుకునేటప్పుడు టీవీ వాల్యూమ్ తగ్గించడం." },
+      { t: "Periodic Motion (లయబద్ధ చలనం)", te: "లయబద్ధ చలనం", d: "నిర్దిష్ట కాలవ్యవధిలో పునరావృతమయ్యే క్రమమైన చలనం.", ex: "గోడ గడియారంలోని లోలకం అటూ ఇటూ ఊగడం." },
+      { t: "Sound Wave Compression", te: "ధ్వని తరంగ సంపీడనాలు", d: "కంపించే వస్తువు ముందుకు కదిలినప్పుడు గాలి అణువులను నెట్టి అధిక పీడన ప్రాంతాన్ని ఏర్పరచడం.", ex: "స్పీకర్ కోన్ ముందుకు వచ్చినప్పుడు గాలి నొక్కబడటం." },
+      { t: "Sound Wave Rarefaction", te: "ధ్వని తరంగ విరళీకరణాలు", d: "కంపించే వస్తువు వెనుకకు కదిలినప్పుడు గాలి అణువులు విడిపోయి అల్ప పీడన ప్రాంతాన్ని ఏర్పరచడం.", ex: "స్పీకర్ కోన్ వెనక్కి వెళ్ళినప్పుడు గాలి వ్యాకోచించడం." },
+      { t: "Oscilloscope Representation", te: "ధ్వని తరంగ చిత్రం", d: "ధ్వని తీవ్రతను, పిచ్ ను స్క్రీన్ పై గ్రాఫ్ రూపంలో చూపే పరికరం.", ex: "తరంగం ఎత్తు కంపన పరిమితిని, తరంగాల సాంద్రత పౌనఃపున్యాన్ని తెలుపుతుంది." },
+      { t: "Echo (ప్రతిధ్వని)", te: "ప్రతిధ్వని", d: "ధ్వని తరంగాలు ఏదైనా గట్టి అడ్డంకిని ఢీకొని తిరిగి మన చెవిని చేరే ప్రక్రియ.", ex: "కొండల మధ్య లేదా పెద్ద ఖాళీ హాలులో గట్టిగా అరిచినప్పుడు మన శబ్దమే తిరిగి వినిపించడం." },
+      { t: "Reverberation (పునఃప్రతిధ్వని)", te: "పునఃప్రతిధ్వని లేదా గుంభనం", d: "మూసిన గదులలో ధ్వని పదే పదే గోడలను తాకి చాలాసేపు కొనసాగే శబ్ద వికృతి.", ex: "గోల్కొండ గుమ్మటం కింద చప్పట్లు కొడితే శబ్దం గింగురుమంటూ ప్రతిధ్వనించడం." },
+      { t: "Acoustics of Buildings", te: "భవన ధ్వని శాస్త్రం", d: "ఆడిటోరియంలు, సినిమా హాళ్లలో శబ్ద ప్రతిధ్వనులు లేకుండా ప్రత్యేక థర్మాకోల్, కార్పెట్లు అమర్చడం.", ex: "సినిమా థియేటర్లలో గోడలకు కర్టెన్లు మరియు ఫైబర్ షీట్లు బిగించడం." },
+      { t: "Ultrasonic Cleaning", te: "అతిధ్వనులతో శుభ్రపరచడం", d: "పరిశ్రమలలో సున్నితమైన యంత్ర భాగాలు, వాచీలలోని సూక్ష్మ భాగాలను అతిధ్వని తరంగాలతో కడిగి మురికిని తొలగించడం.", ex: "ఆభరణాల దుకాణాల్లో బంగారు నగలను ద్రవంలో ఉంచి అల్ట్రాసోనిక్ క్లీనింగ్ చేయడం." },
+      { t: "Sonar System", te: "సోనార్ (SONAR) వ్యవస్థ", d: "సముద్రాల లోతును, నీటిలోపల ఉన్న జలాంతర్గాములను కనుగొనడానికి నౌకలలో అతిధ్వనులను ఉపయోగించే పద్ధతి.", ex: "ఓడ నుండి శబ్ద తరంగాలను అడుగుకు పంపి లోతును లెక్కగట్టడం." },
+      { t: "Stethoscope Principle", te: "స్టెతస్కోప్ పనిచేసే సూత్రం", d: "వైద్యులు గుండె చప్పుడు వినడానికి గొట్టం లోపల ధ్వని బహుళ పరావర్తనం చెందే సూత్రాన్ని ఉపయోగిస్తారు.", ex: "డాక్టర్ రోగి గుండె లయలను స్పష్టంగా వినడం." },
+      { t: "Whistle Mechanism", te: "ఈల వేయడం లోని సైన్స్", d: "నోటితో లేదా క్రీడా విజిల్ లో గాలి సన్నని రంధ్రం గుండా వేగంగా బయటకు వచ్చినప్పుడు కలిగే శబ్ద ప్రకంపనలు.", ex: "పీటీ మాస్టర్ విజిల్ వేసినప్పుడు మైదానమంతా కీచు శబ్దం వినిపించడం." },
+      { t: "Hearing Protection (చెవుల సంరక్షణ)", te: "శ్రవణ అవయవాల రక్షణ", d: "చెవిలో పిన్నులు, అగ్గిపుల్లలు పెట్టకూడదు; అలా చేస్తే కర్ణభేరి చిట్లిపోయి శాశ్వత చెవుడు వస్తుంది.", ex: "చెవులను ఎప్పుడూ పరిశుభ్రమైన పొడి గుడ్డతో మాత్రమే తుడుచుకోవాలి." },
+      { t: "Mimicry Practice", te: "స్వర సాధన లేదా అనుకరణ", d: "గొంతు కండరాలను నియంత్రిస్తూ రకరకాల పౌనఃపున్యాలను, కంపన పరిమితులను పలికించే క్రమశిక్షణతో కూడిన సాధన.", ex: "మిమిక్రీ కళాకారులు రోజుకు గంటల తరబడి గొంతును సాధన చేయడం." },
+      { t: "Role of Nose in Speech", te: "మాట్లాడటంలో ముక్కు ప్రాధాన్యత", d: "'ఙ, ఞ, ణ, న, మ' వంటి అనునాసిక అక్షరాలు పలికేటప్పుడు గాలి ముక్కు రంధ్రాల ద్వారా వచ్చి ప్రత్యేక నాదాన్ని ఇస్తుంది.", ex: "జలుబు చేసినప్పుడు గొంతు బొంగురుగా మారి మాట స్పష్టత తగ్గడం." },
+      { t: "Impact of Weather on Sound", te: "వాతావరణం మరియు ధ్వని ప్రసారం", d: "గాలి ఉష్ణోగ్రత మరియు తేమ పెరిగే కొద్దీ గాలిలో ధ్వని ప్రసార వేగం పెరుగుతుంది.", ex: "ఎండ తీవ్రత ఉన్న మధ్యాహ్నం కంటే చల్లటి రాత్రి వేళల్లో శబ్దం స్పష్టంగా చేరుతుంది." },
+      { t: "Sound as a Social Bond", te: "సామాజిక వారధిగా ధ్వని", d: "ధ్వని అనేది మనుషుల మధ్య పరస్పర అవగాహనను, ప్రేమను, ఆలోచనలను పంచుకోవడానికి ప్రకృతి ప్రసాదించిన అపురూప వరం.", ex: "తల్లి జోలపాట నుండి దేశభక్తి గీతాల వరకు ధ్వని మానవ భావోద్వేగాలకు ప్రాణం." }
+    ];
+
+    function buildEightyPoints() {
+      const container = document.getElementById('eightyPointsContainer');
+      container.innerHTML = '';
+      masterConcepts.forEach((c, idx) => {
+        const card = document.createElement('div');
+        card.className = "concept-card bg-white p-5 rounded-3xl border-2 border-slate-200 shadow-sm hover:border-indigo-400 hover:shadow-md transition space-y-2.5";
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-800 font-black flex items-center justify-center text-xs">${idx + 1}</span>
+            <button onclick="readAloud('${c.t}. ${c.te}')" title="Pronounce Point" class="text-slate-400 hover:text-indigo-600 text-sm">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+          <h4 class="font-black text-sm text-slate-900">${c.t}</h4>
+          <h5 class="font-extrabold text-sm text-indigo-700 telugu-font">${c.te}</h5>
+          <p class="text-xs text-slate-600 telugu-font leading-relaxed">${c.d}</p>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-700 telugu-font">
+            <strong class="text-indigo-700 font-sans uppercase font-black">ఉదాహరణ:</strong> ${c.ex}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    /* =====================================================================
+       4. 80 GLOSSARY TERMS WITH BILINGUAL SENTENCES
+       ===================================================================== */
+    const masterGlossary = [
+      { w: "Vibration", te: "కంపనం", enEx: "The vibration of the rubber band produced a buzzing hum.", teEx: "రబ్బరు బ్యాండ్ యొక్క కంపనం సన్నని ఝుంకార ధ్వనిని పుట్టించింది." },
+      { w: "Vocal cords", te: "స్వరతంత్రులు", enEx: "Air forced from the lungs vibrates human vocal cords to produce speech.", teEx: "ఊపిరితిత్తుల నుండి వచ్చే గాలి స్వరతంత్రులను కంపింపజేసి మాటను ఉత్పత్తి చేస్తుంది." },
+      { w: "Medium", te: "యానకము", enEx: "Sound cannot propagate without an intervening material medium.", teEx: "భౌతిక పదార్థ యానకం లేకుండా ధ్వని ప్రయాణించలేదు." },
+      { w: "Vacuum", te: "శూన్యము", enEx: "Electric bell vibrations cannot be heard inside a sealed vacuum chamber.", teEx: "గాలి లేని శూన్య పాత్రలో మోగే విద్యుత్ గంట శబ్దం బయటకు వినిపించదు." },
+      { w: "Eardrum", te: "కర్ణభేరి", enEx: "Incoming acoustic waves cause the thin eardrum membrane to oscillate.", teEx: "లోపలికి చేరే ధ్వని తరంగాలు పలచని కర్ణభేరి పొరను డోలనం చేస్తాయి." },
+      { w: "Loudness", te: "ధ్వని తీవ్రత", enEx: "Striking the table with greater muscular force increases the sound loudness.", teEx: "బల్లను ఎక్కువ బలంతో బాదడం వల్ల ధ్వని తీవ్రత గణనీయంగా పెరుగుతుంది." },
+      { w: "Feeble", te: "సన్నని / క్షీణ ధ్వని", enEx: "A gently tapped tuning fork emits a very feeble sound.", teEx: "మెల్లగా మీటిన శృతిదండం చాలా సన్నని క్షీణ శబ్దాన్ని ఇస్తుంది." },
+      { w: "Amplitude", te: "కంపన పరిమితి", enEx: "Amplitude refers to the maximum displacement of a body from its mean position.", teEx: "మధ్యస్థ స్థానం నుండి కంపించే వస్తువు పొందే గరిష్ట స్థానభ్రంశాన్ని కంపన పరిమితి అంటారు." },
+      { w: "Decibel", te: "డెసిబెల్", enEx: "Sound intensity levels are standardly recorded in decibels.", teEx: "ధ్వని తీవ్రత స్థాయిలను ప్రామాణికంగా డెసిబెల్స్ ప్రమాణంలో లెక్కిస్తారు." },
+      { w: "Pitch", te: "శృతి / పిచ్", enEx: "The whistling bird produces a sound of remarkably high pitch.", teEx: "ఈల వేసే పక్షి అత్యంత కీచుదనంతో కూడిన అధిక పిచ్ గల ధ్వనిని చేస్తుంది." },
+      { w: "Frequency", te: "పౌనఃపున్యం", enEx: "The blade oscillates at a high frequency of sixty vibrations per second.", teEx: "ఆ బ్లేడు సెకనుకు అరవై కంపనాల అధిక పౌనఃపున్యంతో డోలనం చెందుతోంది." },
+      { w: "Noise", te: "రొద / అపశ్రుతి శబ్దం", enEx: "Unregulated traffic horns create deafening noise in the city market.", teEx: "నగర మార్కెట్లో విచక్షణారహిత వాహనాల హారన్లు భరించలేని రొదను సృష్టిస్తాయి." },
+      { w: "Music", te: "సంగీతం", enEx: "The Carnatic veena recital produced melodious and soothing music.", teEx: "కర్ణాటక వీణా కచేరీ ఎంతో శ్రావ్యమైన, హాయినిచ్చే సంగీతాన్ని అందించింది." },
+      { w: "Larynx", te: "స్వరపేటిక", enEx: "The larynx is located at the top of the windpipe in the human throat.", teEx: "మానవుని గొంతులోని శ్వాసనాళం పైభాగంలో స్వరపేటిక అమర్చబడి ఉంటుంది." },
+      { w: "Audible Range", te: "శ్రవ్య పరిమితి", enEx: "Sounds between 20 Hz and 20,000 Hz fall directly within the human audible range.", teEx: "20 నుండి 20,000 హెర్ట్జ్ మధ్యగల ధ్వనులు మానవుని శ్రవ్య పరిమితిలో ఉంటాయి." },
+      { w: "Inaudible", te: "అశ్రావ్య ధ్వని", enEx: "Frequencies below 20 vibrations per second remain totally inaudible to us.", teEx: "సెకనుకు 20 కంపనాల కంటే తక్కువైన ధ్వనులు మన చెవులకు అశ్రావ్యంగా ఉంటాయి." },
+      { w: "Malleus", te: "కూటకము", enEx: "The hammer-shaped malleus bone is attached directly to the eardrum.", teEx: "సుత్తి ఆకారంలోని కూటకపు ఎముక కర్ణభేరికి నేరుగా అతుక్కొని ఉంటుంది." },
+      { w: "Incus", te: "దాగి", enEx: "The incus bone acts as an acoustic bridge between malleus and stapes.", teEx: "దాగి అనే ఎముక కూటకము మరియు కర్ణవలయ ఎముకల మధ్య సంధానకర్తగా పనిచేస్తుంది." },
+      { w: "Stapes", te: "కర్ణవలయము / స్తాపెస్", enEx: "The stapes is celebrated as the smallest bone in the entire human skeleton.", teEx: "మానవ అస్థిపంజరంలోనే అత్యంత సూక్ష్మమైన ఎముక కర్ణవలయము (స్తాపెస్)." },
+      { w: "Cochlea", te: "కర్ణావర్తం / కోక్లియా", enEx: "Fluid vibrations inside the spiral cochlea activate specialized sensory hair cells.", teEx: "సర్పిలాకార కోక్లియా లోపలి ద్రవ కంపనాలు ప్రత్యేక జ్ఞాన రోమ కణాలను ఉత్తేజపరుస్తాయి." },
+      { w: "Pinna", te: "చెవి దొప్ప", enEx: "The broad outer pinna funnels sound energy straight into the ear canal.", teEx: "వెడల్పాటి బాహ్య చెవి దొప్ప ధ్వని శక్తిని శ్రవణ నాళంలోకి మళ్లిస్తుంది." },
+      { w: "Tympanum", te: "కర్ణభేరి చర్మం", enEx: "A healthy elastic tympanum vibrates vigorously upon hearing sound waves.", teEx: "ఆరోగ్యవంతమైన కర్ణభేరి చర్మం ధ్వని తరంగాలు తాకగానే బలంగా కంపిస్తుంది." },
+      { w: "Oval window", te: "అండాకార కిటికీ", enEx: "The stapes transmits amplified forces into the cochlea via the oval window.", teEx: "స్తాపెస్ ఎముక వర్ధిత కంపనాలను అండాకార కిటికీ ద్వారా కోక్లియాలోనికి పంపుతుంది." },
+      { w: "Sound Pollution", te: "శబ్ద కాలుష్యం", enEx: "Planting tall green trees along highways helps absorb harmful sound pollution.", teEx: "హైవేల వెంబడి పొడవాటి చెట్లను నాటడం వల్ల హానికర శబ్ద కాలుష్యం తగ్గుతుంది." },
+      { w: "Silencer", te: "సైలెన్సర్", enEx: "The motorcycle must be fitted with an efficient silencer to dampen engine noise.", teEx: "ఇంజన్ శబ్దాన్ని అణచివేయడానికి మోటార్ సైకిల్‌కు మంచి సైలెన్సర్‌ను బిగించాలి." },
+      { w: "Ultrasonic", te: "అతిధ్వని", enEx: "Bats use ultrasonic chirps to detect insects in absolute darkness.", teEx: "చీకటిలో కీటకాలను గుర్తించడానికి గబ్బిలాలు అతిధ్వనులను ఉపయోగిస్తాయి." },
+      { w: "Infrasonic", te: "అవశ్రవ్య ధ్వని", enEx: "Elephants communicate over miles using low-frequency infrasonic rumbles.", teEx: "ఏనుగులు అతి తక్కువ పౌనఃపున్యం గల అవశ్రవ్య ధ్వనుల ద్వారా మైళ్ళ దూరం సంభాషిస్తాయి." },
+      { w: "Jalatarang", te: "జలతరంగిణి", enEx: "The artist tuned the jalatarang bowls by altering their water levels.", teEx: "కళాకారుడు నీటి మట్టాలను మారుస్తూ జలతరంగిణి గిన్నెల స్వరాలను సరిచేశాడు." },
+      { w: "Ventriloquist", te: "వెంక్రిలాక్విస్ట్", enEx: "The ventriloquist captivated the hall by talking without moving his lips.", teEx: "ఆ వెంక్రిలాక్విస్ట్ తన పెదవులు కదల్చకుండా మాట్లాడి సభికులను ఆశ్చర్యపరిచాడు." },
+      { w: "Mimicry", te: "మిమిక్రీ / అనుకరణ", enEx: "Dr. Nerella Venu Madhav achieved international acclaim for his masterly mimicry.", teEx: "డాక్టర్ నేరెళ్ళ వేణుమాధవ్ తన అసమాన మిమిక్రీ ప్రతిభతో అంతర్జాతీయ ఖ్యాతి గడించారు." },
+      { w: "Oscillation", te: "డోలనం", enEx: "A regular oscillation about a central point produces a sustained wave.", teEx: "మధ్య బిందువు చుట్టూ జరిగే క్రమబద్ధ డోలనం నిరంతర తరంగాన్ని సృష్టిస్తుంది." },
+      { w: "Hertz", te: "హెర్ట్జ్ (Hz)", enEx: "The musical note was verified to resonate at 440 Hertz.", teEx: "ఆ సంగీత స్వరం 440 హెర్ట్జ్ వద్ద అనునాదం చెందుతోందని నిర్ధారించారు." },
+      { w: "Mean position", te: "మధ్యస్థ స్థానం", enEx: "At rest, the metallic hack-saw blade aligns perfectly with its mean position.", teEx: "నిశ్చల స్థితిలో ఆ లోహపు బ్లేడు తన మధ్యస్థ స్థానం వద్ద సరిగ్గా ఉంటుంది." },
+      { w: "Displacement", te: "స్థానభ్రంశం", enEx: "Greater mechanical displacement of the string yields higher acoustic power.", teEx: "తీగ పొందే ఎక్కువ స్థానభ్రంశం అధిక ధ్వని శక్తిని వెలువరిస్తుంది." },
+      { w: "Shrillness", te: "కీచుదనం", enEx: "The whistle blown by the referee possessed uncomfortable shrillness.", teEx: "రిఫరీ ఊదిన విజిల్ భరించలేని కీచుదనంతో కూడి ఉంది." },
+      { w: "Shehnai", te: "షెహనాయ్", enEx: "Ustad Bismillah Khan turned the shehnai into a sublime classical instrument.", teEx: "ఉస్తాద్ బిస్మిల్లా ఖాన్ షెహనాయ్‌ని ఒక దివ్యమైన శాస్త్రీయ వాయిద్యంగా తీర్చిదిద్దారు." },
+      { w: "Veena", te: "వీణ", enEx: "Plucking the strings of the Saraswati Veena produces divine resonance.", teEx: "సరస్వతీ వీణ తంత్రులను మీటడం ద్వారా అద్భుతమైన నాదం పుడుతుంది." },
+      { w: "Tabla", te: "తబలా", enEx: "Rhythmic beats on the tabla membrane compress the internal air cavity.", teEx: "తబలా చర్మంపై వేసే తాళపు దెబ్బలు లోపలి గాలి కుహరాన్ని సంపీడనం చేస్తాయి." },
+      { w: "Echo", te: "ప్రతిధ్వని", enEx: "Shouting near the steep canyon wall generated an immediate loud echo.", teEx: "ఎత్తైన లోయ గోడ దగ్గర అరిచినప్పుడు తక్షణమే బిగ్గరగా ప్రతిధ్వని వినిపించింది." },
+      { w: "Reverberation", te: "పునఃప్రతిధ్వని / గుంభనం", enEx: "Acoustic reverberation under the Golconda dome carries claps one kilometer.", teEx: "గోల్కొండ గుమ్మటం కింద పుట్టే శబ్ద గుంభనం చప్పట్లను ఒక కిలోమీటరు దాటిస్తుంది." },
+      { w: "Diaphragm", te: "విభాజక పొర", enEx: "The rubber diaphragm vibrated when exposed to high volume sound.", teEx: "ఎక్కువ తీవ్రత గల ధ్వని తగలగానే రబ్బరు విభాజక పొర కంపించింది." },
+      { w: "Air Column", te: "వాయు స్తంభం", enEx: "Shortening the air column in a flute raises its musical pitch.", teEx: "వేణువులోని గాలి స్తంభం పొడవు తగ్గించినప్పుడు దాని పిచ్ పెరుగుతుంది." },
+      { w: "Stridulation", te: "రాపిడి ధ్వని", enEx: "Crickets produce their sharp night call through wing stridulation.", teEx: "కీచురాళ్ళు తమ రెక్కల పరస్పర రాపిడి ద్వారా రాత్రివేళల్లో కీచు శబ్దాన్ని చేస్తాయి." },
+      { w: "Acoustics", te: "ధ్వని శాస్త్రం", enEx: "The modern theater was built according to precise principles of acoustics.", teEx: "ఆధునిక థియేటర్ ధ్వని శాస్త్ర ఖచ్చితమైన సూత్రాల ప్రకారం నిర్మించబడింది." },
+      { w: "Elasticity", te: "స్థితిస్థాపకత", enEx: "The elasticity of vocal cord tissues allows varied pitch modulations.", teEx: "స్వరతంత్రుల కణజాల స్థితిస్థాపకత వివిధ రకాల స్వర మార్పులకు వీలు కల్పిస్తుంది." },
+      { w: "Resonance", te: "అనునాదం", enEx: "The hollow wooden box of the guitar amplifies string vibrations by resonance.", teEx: "గిటార్ బోలు చెక్క పెట్టె అనునాదం ద్వారా తీగల కంపనాలను వర్ధనం చేస్తుంది." },
+      { w: "Compression", te: "సంపీడనం", enEx: "Sound propagates through air as alternating waves of compression and rarefaction.", teEx: "ధ్వని గాలిలో సంపీడనాలు మరియు విరళీకరణాల ప్రత్యామ్నాయ తరంగాలుగా ప్రసరిస్తుంది." },
+      { w: "Rarefaction", te: "విరళీకరణం", enEx: "During rarefaction, atmospheric molecules expand into lower pressure zones.", teEx: "విరళీకరణ సమయంలో వాతావరణ అణువులు అల్ప పీడన ప్రాంతాల్లోకి విస్తరిస్తాయి." },
+      { w: "Ultrasonography", te: "అల్ట్రాసోనోగ్రఫీ", enEx: "Doctors use painless ultrasonography to monitor developing babies inside mothers.", teEx: "గర్భస్థ శిశువు పెరుగుదలను పరీక్షించడానికి వైద్యులు సురక్షితమైన అల్ట్రాసోనోగ్రఫీని వాడతారు." },
+      { w: "Infrasound Warning", te: "అవశ్రవ్య హెచ్చరిక", enEx: "Wild animals fled to high ground after sensing earthquake infrasound.", teEx: "భూకంప అవశ్రవ్య ధ్వనులను ముందే గ్రహించిన వన్యప్రాణులు ఎత్తైన కొండలపైకి పారిపోయాయి." },
+      { w: "Decibel Meter", te: "డెసిబెల్ మీటర్", enEx: "The pollution inspector monitored industrial noise using a digital decibel meter.", teEx: "కాలుష్య నియంత్రణ అధికారి డిజిటల్ డెసిబెల్ మీటర్‌తో కర్మాగార రొదను పరీక్షించారు." },
+      { w: "Hearing Aid", te: "వినికిడి సాధనం", enEx: "An electronic hearing aid amplifies faint sounds for hearing-impaired seniors.", teEx: "ఎలక్ట్రానిక్ వినికిడి యంత్రం బలహీన ధ్వనులను వర్ధనం చేసి వృద్ధులకు సహాయపడుతుంది." },
+      { w: "Echolocation", te: "ధ్వని ప్రతిబింబ మార్గం", enEx: "Dolphins utilize underwater echolocation to hunt fish in murky river waters.", teEx: "బురద నీటిలో చేపలను వేటాడేందుకు డాల్ఫిన్లు నీటి అడుగున ఎకోలొకేషన్ వాడుతాయి." },
+      { w: "Noise Barrier", te: "శబ్ద నిరోధక గోడ", enEx: "Concrete noise barriers were constructed beside the elevated express highway.", teEx: "ఎలివేటెడ్ ఎక్స్‌ప్రెస్‌వే పక్కన కాంక్రీట్ శబ్ద నిరోధక గోడలను నిర్మించారు." },
+      { w: "Orifice", te: "సూక్ష్మ రంధ్రం", enEx: "Air passing through narrow instrument orifices generates harmonic sound tones.", teEx: "సన్నని వాయిద్య రంధ్రాల గుండా ప్రవహించే గాలి శ్రావ్యమైన స్వరాలను పుట్టిస్తుంది." },
+      { w: "Wavelength", te: "తరంగ దైర్ఘ్యం", enEx: "Low frequency bass notes possess a significantly longer acoustic wavelength.", teEx: "తక్కువ పౌనఃపున్యం గల బేస్ శబ్దాలు చాలా పొడవైన తరంగ దైర్ఘ్యాన్ని కలిగి ఉంటాయి." },
+      { w: "Speed of Sound", te: "ధ్వని వేగం", enEx: "The speed of sound in dry air at room temperature is approximately 343 m/s.", teEx: "గది ఉష్ణోగ్రత వద్ద పొడి గాలిలో ధ్వని వేగం సెకనుకు దాదాపు 343 మీటర్లు." },
+      { w: "Sonic Boom", te: "ధ్వని విస్ఫోటనం", enEx: "Supersonic fighter jets breaking the speed of sound trigger a violent sonic boom.", teEx: "ధ్వని వేగాన్ని మించి దూసుకెళ్ళే యుద్ధ విమానాలు తీవ్రమైన ధ్వని విస్ఫోటనాన్ని సృష్టిస్తాయి." },
+      { w: "Subsonic", te: "ఉప-ధ్వని వేగం", enEx: "Commercial passenger airplanes generally fly at safe subsonic cruise velocities.", teEx: "సాధారణ ప్రయాణీకుల విమానాలు సాధారణంగా సురక్షితమైన ఉప-ధ్వని వేగంతో ప్రయాణిస్తాయి." },
+      { w: "Auditory Nerve", te: "శ్రవణ నాడి", enEx: "Damage to the auditory nerve permanently prevents signals reaching the brain.", teEx: "శ్రవణ నాడి దెబ్బతింటే సంకేతాలు మెదడును చేరక శాశ్వత వినికిడి లోపం వస్తుంది." },
+      { w: "Sound Insulation", te: "ధ్వని నిరోధకం", enEx: "Recording studios line their interior rooms with specialized sound insulation foam.", teEx: "రికార్డింగ్ స్టూడియోలు తమ గదుల లోపల ప్రత్యేక ధ్వని నిరోధక ఫోమ్‌ను అమరుస్తాయి." },
+      { w: "Doppler Effect", te: "డాప్లర్ ప్రభావం", enEx: "An approaching ambulance siren sounds higher in pitch due to the Doppler effect.", teEx: "సమీపించే అంబులెన్స్ సైరన్ డాప్లర్ ప్రభావం వల్ల ఎక్కువ కీచుగా వినిపిస్తుంది." },
+      { w: "Harmonics", te: "సహజ స్వరాలు", enEx: "Violin strings vibrate in multiple complex harmonics to enrich their musical tone.", teEx: "వయోలిన్ తీగలు తమ సంగీత నాదాన్ని పెంచడానికి అనేక సంక్లిష్ట సహజ స్వరాలలో కంపిస్తాయి." },
+      { w: "Pitch Modulation", te: "స్వర పరివర్తన", enEx: "Singers practice vocal cord exercises to achieve effortless pitch modulation.", teEx: "గాయకులు సులభంగా శృతిని మార్చడానికి స్వరతంత్రుల సాధన చేస్తారు." },
+      { w: "Hypertension", te: "అధిక రక్తపోటు", enEx: "Continuous nighttime airport noise can aggravate chronic human hypertension.", teEx: "విమానాశ్రయాల వద్ద నిరంతర రాత్రివేళల రొద మనుషులలో అధిక రక్తపోటును తీవ్రతరం చేస్తుంది." },
+      { w: "Insomnia", te: "నిద్రలేమి", enEx: "Loudspeakers operating late at night cause severe insomnia among neighborhood residents.", teEx: "రాత్రిపూట ఆలస్యంగా మోగే లౌడ్‌స్పీకర్లు పరిసరాల ప్రజలలో తీవ్ర నిద్రలేమికి కారణమవుతాయి." },
+      { w: "Cerebral Cortex", te: "మస్తిష్క వల్కలం", enEx: "The auditory region in the cerebral cortex processes spoken language nuances.", teEx: "మెదడులోని శ్రవణ భాగం మాట్లాడే భాషలోని భావాలను విశ్లేషిస్తుంది." },
+      { w: "Mechanical Wave", te: "యాంత్రిక తరంగం", enEx: "Sound is classified as a mechanical wave because it requires a physical medium.", teEx: "ధ్వని ప్రయాణానికి భౌతిక యానకం అవసరమైనందున దీనిని యాంత్రిక తరంగం అంటారు." },
+      { w: "Stethoscope", te: "స్టెతస్కోప్", enEx: "The physician rested the stethoscope against the patient's chest to listen to heart valves.", teEx: "గుండె కవాటాల చప్పుడు వినడానికి వైద్యుడు రోగి ఛాతీపై స్టెతస్కోప్ ఉంచాడు." },
+      { w: "Bell Jar Experiment", te: "గాజు గంట పాత్ర ప్రయోగం", enEx: "The famous bell jar experiment proves conclusively that sound cannot cross vacuum.", teEx: "ప్రసిద్ధ గాజు గంట ప్రయోగం శూన్యంలో ధ్వని ప్రయాణించలేదని స్పష్టంగా నిరూపిస్తుంది." },
+      { w: "Tone", te: "స్వరం", enEx: "A pure tone vibrates at a single unvarying frequency.", teEx: "ఒక స్వచ్ఛమైన స్వరం ఒకే స్థిరమైన పౌనఃపున్యంతో కంపిస్తుంది." },
+      { w: "Timbre", te: "ధ్వని గుణం", enEx: "Timbre allows listeners to differentiate between a flute and a violin playing identical notes.", teEx: "ఒకే శృతిలో పలికినా పిల్లనగ్రోవికి, వయోలిన్‌కు గల తేడాను ధ్వని గుణం (టింబ్రే) ద్వారా గుర్తిస్తాం." },
+      { w: "Bioacoustics", te: "జీవ ధ్వని శాస్త్రం", enEx: "Scientists research bioacoustics to decipher communication calls between whales.", teEx: "సముద్ర తిమింగలాల శబ్ద సంభాషణలను అర్థం చేసుకోవడానికి శాస్త్రవేత్తలు జీవ ధ్వని శాస్త్రాన్ని పరిశోధిస్తారు." },
+      { w: "Acoustic Shadow", te: "ధ్వని ఛాయ", enEx: "Heavy physical structures create an acoustic shadow where sound levels drop sharply.", teEx: "భారీ కట్టడాలు శబ్దాన్ని అడ్డుకుని ధ్వని ఛాయా ప్రదేశాలను ఏర్పరుస్తాయి." },
+      { w: "Overtones", te: "అతిస్వరాలు", enEx: "Musical richness emerges from the intricate blending of base frequencies and overtones.", teEx: "మూల పౌనఃపున్యాలతో పాటు అతిస్వరాలు కలవడం వల్ల సంగీతానికి గాంభీర్యం వస్తుంది." },
+      { w: "Damping", te: "కంపన నిరోధం", enEx: "Touching the vibrating steel plate instantly causes mechanical damping of sound.", teEx: "కంపించే స్టీలు పళ్ళాన్ని చేత్తో తాకగానే కంపన నిరోధం జరిగి శబ్దం ఆగిపోతుంది." },
+      { w: "Supersonic", te: "సూపర్‌సోనిక్", enEx: "The military aircraft flew at supersonic speed exceeding Mach one.", teEx: "ఆ యుద్ధ విమానం ధ్వని వేగాన్ని మించిన సూపర్‌సోనిక్ వేగంతో దూసుకెళ్ళింది." },
+      { w: "Hypersonic", te: "హైపర్‌సోనిక్", enEx: "Hypersonic missiles travel through the upper atmosphere at five times the speed of sound.", teEx: "హైపర్‌సోనిక్ క్షిపణులు ధ్వని వేగానికి ఐదు రెట్ల వేగంతో వాతావరణంలో ప్రయాణిస్తాయి." },
+      { w: "Hearing Threshold", te: "వినికిడి గడప", enEx: "Prolonged earbud abuse gradually shifts the normal human hearing threshold.", teEx: "నిరంతరం ఇయర్‌బడ్స్ వాడటం వల్ల సాధారణ మానవ వినికిడి గడప క్షీణిస్తుంది." },
+      { w: "Bilateral Hearing", te: "ద్విపార్శ్వ వినికిడి", enEx: "Having two ears enables accurate bilateral localization of incoming danger sounds.", teEx: "రెండు చెవులు ఉండటం వల్ల ఏ వైపు నుండి ప్రమాద శబ్దం వస్తుందో ఖచ్చితంగా గుర్తించగలం." }
+    ];
+
+    function buildGlossary() {
+      const container = document.getElementById('glossaryContainer');
+      container.innerHTML = '';
+      masterGlossary.forEach((g, idx) => {
+        const card = document.createElement('div');
+        card.className = "glossary-card bg-white p-5 rounded-3xl border-2 border-slate-200 shadow-sm hover:border-emerald-400 hover:shadow-md transition space-y-2.5";
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-900 font-black flex items-center justify-center text-xs">${idx + 1}</span>
+            <button onclick="readAloud('${g.w}. ${g.te}')" title="Pronounce" class="text-slate-400 hover:text-emerald-700 text-sm">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
+          <h4 class="font-black text-sm text-slate-900">${g.w}</h4>
+          <h5 class="font-extrabold text-sm text-emerald-700 telugu-font">${g.te}</h5>
+          <div class="p-3 bg-slate-50 rounded-xl text-xs text-slate-700 space-y-1.5 border border-slate-200 leading-relaxed">
+            <p><strong>EN:</strong> ${g.enEx}</p>
+            <p class="telugu-font text-indigo-950"><strong>తెలుగు:</strong> ${g.teEx}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    /* =====================================================================
+       5. CONTENT SEARCH & FILTERING
+       ===================================================================== */
+    function filterContent() {
+      const q = document.getElementById('universalSearchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.concept-card, .glossary-card, .page-block, .exercise-item');
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    function toggleLang(mode) {
+      const btnBoth = document.getElementById('btnBoth');
+      const btnEn = document.getElementById('btnEn');
+      const btnTe = document.getElementById('btnTe');
+
+      [btnBoth, btnEn, btnTe].forEach(b => {
+        b.className = "px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800";
+      });
+
+      const enElements = document.querySelectorAll('.lang-en');
+      const teElements = document.querySelectorAll('.lang-te');
+
+      if (mode === 'both') {
+        btnBoth.className = "px-3.5 py-2 rounded-xl bg-indigo-600 text-white shadow-xs";
+        enElements.forEach(el => el.classList.remove('hidden'));
+        teElements.forEach(el => el.classList.remove('hidden'));
+      } else if (mode === 'en') {
+        btnEn.className = "px-3.5 py-2 rounded-xl bg-indigo-600 text-white shadow-xs";
+        enElements.forEach(el => el.classList.remove('hidden'));
+        teElements.forEach(el => el.classList.add('hidden'));
+      } else if (mode === 'te') {
+        btnTe.className = "px-3.5 py-2 rounded-xl bg-indigo-600 text-white shadow-xs";
+        enElements.forEach(el => el.classList.add('hidden'));
+        teElements.forEach(el => el.classList.remove('hidden'));
+      }
+    }
+
+    /* =====================================================================
+       6. AUDIO SYNTHESIS
+       ===================================================================== */
+    function readAloud(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.92;
+      utterance.pitch = 1.0;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    /* =====================================================================
+       7. SCROLL-TO-TOP & SPY
+       ===================================================================== */
+    function initScrollSpy() {
+      const btn = document.getElementById('backToTopBtn');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          btn.classList.remove('translate-y-20', 'opacity-0');
+          btn.classList.add('translate-y-0', 'opacity-100');
+        } else {
+          btn.classList.add('translate-y-20', 'opacity-0');
+          btn.classList.remove('translate-y-0', 'opacity-100');
+        }
+      });
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
